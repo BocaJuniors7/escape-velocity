@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://w6b54v1bm36u"]
+
+[ext_resource type="Script" path="res://HUD/canvas_layer.gd" id="1_26g34"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_26g34")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BatteryBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.922222
+anchor_right = 0.154687
+anchor_bottom = 0.983333
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="BatteryLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00859375
+anchor_top = 0.877778
+anchor_right = 0.148438
+anchor_bottom = 0.909722
+grow_horizontal = 2
+grow_vertical = 0
+text = "Battery Level:
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.788889
+anchor_right = 0.154687
+anchor_bottom = 0.859722
+grow_vertical = 0
+value = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00703125
+anchor_top = 0.744444
+anchor_right = 0.146875
+anchor_bottom = 0.776389
+grow_horizontal = 2
+grow_vertical = 0
+text = "Health:
+"
+metadata/_edit_use_anchors_ = true

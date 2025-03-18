@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs6aimxy4riyn"]
+
+[ext_resource type="Script" path="res://Characters/Player/player.gd" id="1_eddf6"]
+[ext_resource type="Texture2D" uid="uid://beva0dhohey0" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/hipFire/Armature_hipFire_00.png" id="2_ulbyn"]
+[ext_resource type="Texture2D" uid="uid://dd3e8tdx3k7tv" path="res://assets/decals/circle.png" id="3_4il67"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhdfp"]
+radius = 59.0
+height = 162.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 14
+script = ExtResource("1_eddf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.74533
+texture = ExtResource("2_ulbyn")
+
+[node name="HitBox" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -1)
+rotation = -1.74533
+shape = SubResource("CapsuleShape2D_bhdfp")
+
+[node name="PlayerLight" type="PointLight2D" parent="."]
+position = Vector2(10, -14)
+color = Color(1, 0.968627, 0.815686, 1)
+energy = 2.44
+texture = ExtResource("3_4il67")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="GunPoint" type="Marker2D" parent="."]
+visibility_layer = 7
+position = Vector2(104, 14)
+rotation = -1.74533

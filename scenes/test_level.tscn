@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://bncnrv0oasy7g"]
+
+[ext_resource type="Texture2D" uid="uid://rba5p7m8h0qa" path="res://assets/decals/BlackBackGround.jpg" id="1_m8wrv"]
+[ext_resource type="PackedScene" uid="uid://bs6aimxy4riyn" path="res://Characters/Player/player.tscn" id="1_w15xr"]
+[ext_resource type="PackedScene" uid="uid://dsybfdp5iwrkj" path="res://Characters/Enemie/enemie_with_knife.tscn" id="2_ukjw0"]
+[ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="3_4tood"]
+[ext_resource type="PackedScene" uid="uid://bmmm5ctvt5o8y" path="res://Items/battery_pick_up.tscn" id="3_b80cd"]
+[ext_resource type="PackedScene" uid="uid://brpdvs24r238o" path="res://Characters/Enemie/robot_enemie.tscn" id="3_k35oa"]
+
+[node name="Test_Level" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(328.5, 232.25)
+scale = Vector2(100, 91.241)
+texture = ExtResource("1_m8wrv")
+region_rect = Rect2(-8832.13, -5530.51, 18013.2, 13261)
+
+[node name="Player" parent="." instance=ExtResource("1_w15xr")]
+position = Vector2(200, 390)
+
+[node name="HUD" parent="." instance=ExtResource("3_4tood")]
+
+[node name="EnemieWithKnife" parent="." instance=ExtResource("2_ukjw0")]
+position = Vector2(778, 384)
+
+[node name="RobotEnemie" parent="." instance=ExtResource("3_k35oa")]
+position = Vector2(515, 629)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="BatteryPickUp" parent="." instance=ExtResource("3_b80cd")]
+position = Vector2(317, 223)

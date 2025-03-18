@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsybfdp5iwrkj"]
+
+[ext_resource type="Texture2D" uid="uid://c2l67a478immg" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_00.png" id="1_xo8eu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2epr3"]
+radius = 33.0
+height = 156.0
+
+[node name="EnemieWithKnife" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xo8eu")
+
+[node name="HitBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+rotation = -0.631088
+shape = SubResource("CapsuleShape2D_2epr3")
