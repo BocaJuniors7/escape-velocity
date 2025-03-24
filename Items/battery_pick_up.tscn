@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmmm5ctvt5o8y"]
 
-[ext_resource type="Script" path="res://Items/battery_pick_up.gd" id="1_4lbih"]
+[ext_resource type="Script" uid="uid://cf8n2yn03a05m" path="res://Items/battery_pick_up.gd" id="1_4lbih"]
 [ext_resource type="Texture2D" uid="uid://b05w8sw0l83p1" path="res://assets/decals/battery.png" id="1_pilt4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hj8ql"]

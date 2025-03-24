@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cldy1u267tnqg"]
+
+[ext_resource type="Script" uid="uid://dl1gaasy03cnc" path="res://scripts/batteries.gd" id="1_mx4t8"]
+[ext_resource type="Texture2D" uid="uid://deduxeltef1mh" path="res://Items/Green Battery.jpg" id="1_x2ejo"]
+[ext_resource type="Texture2D" uid="uid://giq31owosu5a" path="res://Items/Half Battery.jpg" id="2_mx4t8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ejo"]
+size = Vector2(21.75, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx4t8"]
+size = Vector2(11, 41.75)
+
+[node name="Batteries" type="Area2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_mx4t8")
+
+[node name="Full Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_x2ejo")
+
+[node name="Full Battery Charge" type="Sprite2D" parent="."]
+position = Vector2(398, 0)
+scale = Vector2(0.107843, 0.126344)
+texture = ExtResource("1_x2ejo")
+
+[node name="Half Charged Battery" type="Sprite2D" parent="."]
+position = Vector2(207, -1)
+scale = Vector2(0.0732755, 0.0856166)
+texture = ExtResource("2_mx4t8")
+
+[node name="Half Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(206, 1)
+shape = SubResource("RectangleShape2D_mx4t8")

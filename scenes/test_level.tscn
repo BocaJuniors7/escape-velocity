@@ -10,6 +10,7 @@
 [node name="Test_Level" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(328.5, 232.25)
 scale = Vector2(100, 91.241)
 texture = ExtResource("1_m8wrv")
@@ -27,6 +28,7 @@ position = Vector2(778, 384)
 position = Vector2(515, 629)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="BatteryPickUp" parent="." instance=ExtResource("3_b80cd")]
