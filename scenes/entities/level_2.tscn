@@ -24,9 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://d4jv2ivvtwtxs" path="res://graphics/graphics/decals/blood.png" id="20_p3g2q"]
 [ext_resource type="Texture2D" uid="uid://03lqonprpt5g" path="res://assets/sprites/extra player sprites/5.png" id="24_o2ts6"]
 [ext_resource type="Texture2D" uid="uid://be80fcd2fuikr" path="res://assets/sprites/extra player sprites 2/24.png" id="25_iy44b"]
-[ext_resource type="Script" path="res://scenes/entities/canvas_layer.gd" id="26_p7g3d"]
+[ext_resource type="Script" uid="uid://jn6g1mmtliwj" path="res://scenes/entities/canvas_layer.gd" id="26_p7g3d"]
 [ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="27_3v4ei"]
-[ext_resource type="Script" path="res://scenes/entities/color_rect.gd" id="27_5qriv"]
+[ext_resource type="Script" uid="uid://dapo6of7ujfwp" path="res://scenes/entities/color_rect.gd" id="27_5qriv"]
 
 [node name="level2" type="Node2D"]
 

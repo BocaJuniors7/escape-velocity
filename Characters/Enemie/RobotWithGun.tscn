@@ -1,7 +1,7 @@
 [gd_scene load_steps=374 format=3 uid="uid://cvcl3m3fad5gt"]
 
 [ext_resource type="Texture2D" uid="uid://cssjb1m8javmc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_00.png" id="1_2wbt3"]
-[ext_resource type="Script" path="res://Characters/Enemie/robot_with_gun.gd" id="1_7khy5"]
+[ext_resource type="Script" uid="uid://bre0ma81cnxul" path="res://Characters/Enemie/robot_with_gun.gd" id="1_7khy5"]
 [ext_resource type="Texture2D" uid="uid://cms8k4hvm7cf1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_01.png" id="2_6m0fk"]
 [ext_resource type="PackedScene" uid="uid://di7si26hgw67j" path="res://Projectiles/bullet.tscn" id="2_vn0mu"]
 [ext_resource type="Texture2D" uid="uid://cdmf2n23vvkf2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_02.png" id="3_bqcpk"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=163 format=3 uid="uid://dsybfdp5iwrkj"]
 
-[ext_resource type="Script" path="res://Characters/Enemie/enemie_with_knife.gd" id="1_g5xd0"]
+[ext_resource type="Script" uid="uid://ele2ii1dry7o" path="res://Characters/Enemie/enemie_with_knife.gd" id="1_g5xd0"]
 [ext_resource type="Texture2D" uid="uid://c2l67a478immg" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_00.png" id="1_xo8eu"]
 [ext_resource type="Texture2D" uid="uid://d3vqpl4picrde" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_01.png" id="2_k3use"]
 [ext_resource type="Texture2D" uid="uid://dl54ccfe5bx3o" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_02.png" id="3_6vryq"]

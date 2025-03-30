@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://di7si26hgw67j"]
 
-[ext_resource type="Script" path="res://Projectiles/bullet.gd" id="1_3si4l"]
+[ext_resource type="Script" uid="uid://ctlbw8iy30fw3" path="res://Projectiles/bullet.gd" id="1_3si4l"]
 [ext_resource type="Texture2D" uid="uid://cmn83xiu5htl4" path="res://assets/decals/bullet.webp" id="1_tiduv"]
 [ext_resource type="Texture2D" uid="uid://dd3e8tdx3k7tv" path="res://assets/decals/circle.png" id="3_3x6d5"]
 

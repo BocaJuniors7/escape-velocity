@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0wjk660yl5gn"]
 
 [ext_resource type="Texture2D" uid="uid://giq31owosu5a" path="res://Items/Half Battery.jpg" id="1_idmg8"]
-[ext_resource type="Script" path="res://Items/half_battery_pick_up.gd" id="1_p5sc7"]
+[ext_resource type="Script" uid="uid://cray5vc0fxr8s" path="res://Items/half_battery_pick_up.gd" id="1_p5sc7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ghbt3"]
 radius = 55.0091

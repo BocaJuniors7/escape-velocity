@@ -1,6 +1,6 @@
 [gd_scene load_steps=372 format=3 uid="uid://bs6aimxy4riyn"]
 
-[ext_resource type="Script" path="res://Characters/Player/player.gd" id="1_eddf6"]
+[ext_resource type="Script" uid="uid://byp1i5sbdobd3" path="res://Characters/Player/player.gd" id="1_eddf6"]
 [ext_resource type="Texture2D" uid="uid://beva0dhohey0" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/hipFire/Armature_hipFire_00.png" id="2_ulbyn"]
 [ext_resource type="Texture2D" uid="uid://dd3e8tdx3k7tv" path="res://assets/decals/circle.png" id="3_4il67"]
 [ext_resource type="Texture2D" uid="uid://2uedke4j5fng" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/run/Armature_newAnimation_00.png" id="4_km4bj"]
