@@ -1,6 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://kx670m7gqwwr"]
 
 [ext_resource type="Texture2D" uid="uid://bgug5rhgke1ok" path="res://graphics/graphics/floors doors and airlocks/floor01.png" id="1_mesqi"]
+[ext_resource type="PackedScene" uid="uid://bs6aimxy4riyn" path="res://Characters/Player/player.tscn" id="2_g5hno"]
 [ext_resource type="Texture2D" uid="uid://cp55w4tvrfb8p" path="res://graphics/graphics/floors doors and airlocks/floor02.png" id="2_whsa2"]
 [ext_resource type="Texture2D" uid="uid://css05oh6fn3kp" path="res://graphics/graphics/floors doors and airlocks/floor04.png" id="3_1lnrr"]
 [ext_resource type="Texture2D" uid="uid://ds62o0nxfflio" path="res://graphics/graphics/floors doors and airlocks/floor07.png" id="4_gmqef"]
@@ -21,12 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://deduxeltef1mh" path="res://Items/Green Battery.jpg" id="18_7nbqi"]
 [ext_resource type="Texture2D" uid="uid://giq31owosu5a" path="res://Items/Half Battery.jpg" id="19_5qriv"]
 [ext_resource type="Texture2D" uid="uid://d4jv2ivvtwtxs" path="res://graphics/graphics/decals/blood.png" id="20_p3g2q"]
-[ext_resource type="Texture2D" uid="uid://k4ukry3mdt6u" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/Tpose.png" id="22_luq03"]
-[ext_resource type="Texture2D" uid="uid://cqj0aime3211c" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shadow.png" id="23_psruw"]
 [ext_resource type="Texture2D" uid="uid://03lqonprpt5g" path="res://assets/sprites/extra player sprites/5.png" id="24_o2ts6"]
 [ext_resource type="Texture2D" uid="uid://be80fcd2fuikr" path="res://assets/sprites/extra player sprites 2/24.png" id="25_iy44b"]
-[ext_resource type="Script" uid="uid://jn6g1mmtliwj" path="res://scenes/entities/canvas_layer.gd" id="26_p7g3d"]
-[ext_resource type="Script" uid="uid://dapo6of7ujfwp" path="res://scenes/entities/color_rect.gd" id="27_5qriv"]
+[ext_resource type="Script" path="res://scenes/entities/canvas_layer.gd" id="26_p7g3d"]
+[ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="27_3v4ei"]
+[ext_resource type="Script" path="res://scenes/entities/color_rect.gd" id="27_5qriv"]
 
 [node name="level2" type="Node2D"]
 
@@ -568,15 +568,6 @@ position = Vector2(-55.5, 230.25)
 scale = Vector2(0.0616622, 0.138325)
 texture = ExtResource("20_p3g2q")
 
-[node name="Tpose" type="Sprite2D" parent="."]
-position = Vector2(181, 448)
-texture = ExtResource("22_luq03")
-
-[node name="Shadow" type="Sprite2D" parent="."]
-position = Vector2(181.5, 501)
-scale = Vector2(2.0625, 0.785)
-texture = ExtResource("23_psruw")
-
 [node name="5" type="Sprite2D" parent="."]
 position = Vector2(-97.5, 100.5)
 scale = Vector2(0.773438, 0.710938)
@@ -591,7 +582,20 @@ layer = -1
 script = ExtResource("26_p7g3d")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = -1
+anchor_left = -0.780469
+anchor_top = -0.618056
+anchor_right = 1.0
+anchor_bottom = 1.26667
+offset_top = 3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("27_5qriv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_g5hno")]
+position = Vector2(265, 78)
+scale = Vector2(0.242188, 0.23125)
+
+[node name="HUD" parent="." instance=ExtResource("27_3v4ei")]

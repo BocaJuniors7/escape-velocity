@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0wjk660yl5gn"]
+
+[ext_resource type="Texture2D" uid="uid://giq31owosu5a" path="res://Items/Half Battery.jpg" id="1_idmg8"]
+[ext_resource type="Script" path="res://Items/half_battery_pick_up.gd" id="1_p5sc7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ghbt3"]
+radius = 55.0091
+
+[node name="HalfBatteryPickUP" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_p5sc7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_idmg8")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ghbt3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

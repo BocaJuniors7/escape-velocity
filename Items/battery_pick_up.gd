@@ -1,11 +1,16 @@
 extends Area2D
 
-@export var battery_amount = 25.0  # Amount of battery to restore
+@export var battery_amount = 25.0
 
 func _ready():
-	connect("body_entered", Callable(self, "_on_body_entered"))
+	connect("body_entered", _on_area_2d_body_entered)
 
-func _on_body_entered(body):
-	if body.is_in_group("player"):
-		body.add_battery(battery_amount)  # Add battery to player
-		queue_free()  # Remove battery after pickup
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		print("🔋 Battery collected!")
+		if body.has_method("add_battery"):
+			body.add_battery(battery_amount)
+		queue_free()

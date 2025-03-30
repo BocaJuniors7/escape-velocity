@@ -1,0 +1,1548 @@
+[gd_scene load_steps=374 format=3 uid="uid://hxbgw1mun0yd"]
+
+[ext_resource type="Texture2D" uid="uid://cssjb1m8javmc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_00.png" id="1_cfc5d"]
+[ext_resource type="Script" path="res://Characters/Enemie/robot_with_rocket.gd" id="1_syrfv"]
+[ext_resource type="PackedScene" uid="uid://dqgfgifsn55j8" path="res://Projectiles/rocket.tscn" id="2_invwa"]
+[ext_resource type="Texture2D" uid="uid://dy62k8ifhaiju" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_00.png" id="2_l6f5c"]
+[ext_resource type="Texture2D" uid="uid://cxb3sglw5ifj2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_01.png" id="3_7qh0y"]
+[ext_resource type="Texture2D" uid="uid://1pxcuf5mbcx7" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_02.png" id="4_pjo5v"]
+[ext_resource type="Texture2D" uid="uid://dr6hgy8xft1b8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_03.png" id="5_i11vs"]
+[ext_resource type="Texture2D" uid="uid://d02lxyhdci6js" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_04.png" id="6_fejg4"]
+[ext_resource type="Texture2D" uid="uid://cl602eyj6v2xq" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_05.png" id="7_xoqyg"]
+[ext_resource type="Texture2D" uid="uid://jp825qaiph45" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_06.png" id="8_12fei"]
+[ext_resource type="Texture2D" uid="uid://hhj7id6cxuv0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_07.png" id="9_11xcu"]
+[ext_resource type="Texture2D" uid="uid://ogewrbmcb43l" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_08.png" id="10_qrg05"]
+[ext_resource type="Texture2D" uid="uid://d3os5soc3dn4k" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_09.png" id="11_c2o2b"]
+[ext_resource type="Texture2D" uid="uid://eowv7icn155x" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_10.png" id="12_4c8n2"]
+[ext_resource type="Texture2D" uid="uid://bwlta6xu4ourk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_11.png" id="13_rack3"]
+[ext_resource type="Texture2D" uid="uid://sjwvbtm71fqt" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_12.png" id="14_y4fn3"]
+[ext_resource type="Texture2D" uid="uid://2hcdapqy6x3k" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_13.png" id="15_wcqv2"]
+[ext_resource type="Texture2D" uid="uid://cgnddic4tb2ho" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_14.png" id="16_xikbu"]
+[ext_resource type="Texture2D" uid="uid://cxcw1r7g7aqu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_15.png" id="17_b24ke"]
+[ext_resource type="Texture2D" uid="uid://f1s86d7m8c1b" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_16.png" id="18_u1gcn"]
+[ext_resource type="Texture2D" uid="uid://b81plc1xsj7po" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_17.png" id="19_axr2m"]
+[ext_resource type="Texture2D" uid="uid://kb7qyf2xrbkk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_18.png" id="20_7j6bi"]
+[ext_resource type="Texture2D" uid="uid://de1theob54pfa" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_19.png" id="21_fgmje"]
+[ext_resource type="Texture2D" uid="uid://dxxheed7shbln" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_20.png" id="22_vgv1n"]
+[ext_resource type="Texture2D" uid="uid://d262ixmnn5igf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_21.png" id="23_p6igt"]
+[ext_resource type="Texture2D" uid="uid://cmsirqlitsjky" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_22.png" id="24_c0uac"]
+[ext_resource type="Texture2D" uid="uid://316cga56ler2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_23.png" id="25_iunba"]
+[ext_resource type="Texture2D" uid="uid://dj4s4tp2enlsc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_24.png" id="26_jlf4h"]
+[ext_resource type="Texture2D" uid="uid://c0aocno7mfdqu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_25.png" id="27_tcwbt"]
+[ext_resource type="Texture2D" uid="uid://be1yvg4femnjb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_26.png" id="28_3a8jr"]
+[ext_resource type="Texture2D" uid="uid://bbbl16vc13jsx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_27.png" id="29_n7st6"]
+[ext_resource type="Texture2D" uid="uid://dyp3h50blv8in" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_28.png" id="30_t3yh0"]
+[ext_resource type="Texture2D" uid="uid://byf04rnhvobrs" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_29.png" id="31_hnq1h"]
+[ext_resource type="Texture2D" uid="uid://dcnes3s26v6t0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_30.png" id="32_rw6nf"]
+[ext_resource type="Texture2D" uid="uid://8jo6kbqj7u3o" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_31.png" id="33_icfx8"]
+[ext_resource type="Texture2D" uid="uid://cv0306qkkoh1r" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_32.png" id="34_i1kjx"]
+[ext_resource type="Texture2D" uid="uid://b6v1duh416cti" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_33.png" id="35_rqhjc"]
+[ext_resource type="Texture2D" uid="uid://ockdw5y7v4rj" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_34.png" id="36_ikouf"]
+[ext_resource type="Texture2D" uid="uid://blk8cakwn32jl" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_35.png" id="37_kf44u"]
+[ext_resource type="Texture2D" uid="uid://caym8mokeft1l" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_36.png" id="38_4tvg4"]
+[ext_resource type="Texture2D" uid="uid://5wpl2q2hu2nm" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_37.png" id="39_xfxqh"]
+[ext_resource type="Texture2D" uid="uid://v8jrhd3jd0b8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_38.png" id="40_s1smj"]
+[ext_resource type="Texture2D" uid="uid://l1un2evk6fue" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_39.png" id="41_e5uxd"]
+[ext_resource type="Texture2D" uid="uid://cdkpws7wnjbnn" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_40.png" id="42_us4nn"]
+[ext_resource type="Texture2D" uid="uid://bkl46wyciyn4t" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_41.png" id="43_jawxb"]
+[ext_resource type="Texture2D" uid="uid://cms8k4hvm7cf1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_01.png" id="43_mjqrw"]
+[ext_resource type="Texture2D" uid="uid://1fwv08sw0r87" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_42.png" id="44_wb7a0"]
+[ext_resource type="Texture2D" uid="uid://cdmf2n23vvkf2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_02.png" id="44_x133u"]
+[ext_resource type="Texture2D" uid="uid://x26ytl4131km" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_03.png" id="45_i0l1n"]
+[ext_resource type="Texture2D" uid="uid://ukhfurhkssf3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_43.png" id="45_y7kcg"]
+[ext_resource type="Texture2D" uid="uid://contwmojisfaj" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_44.png" id="46_3ys5q"]
+[ext_resource type="Texture2D" uid="uid://d2jnlhwe7ekur" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_04.png" id="46_p1iko"]
+[ext_resource type="Texture2D" uid="uid://ihpws5tvtvrd" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_05.png" id="47_0ibvy"]
+[ext_resource type="Texture2D" uid="uid://u1r27d4embys" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_45.png" id="47_hrun3"]
+[ext_resource type="Texture2D" uid="uid://bjyyiuafimy1x" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_06.png" id="48_gr4lc"]
+[ext_resource type="Texture2D" uid="uid://di51ap2t283ad" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_46.png" id="48_ixu6r"]
+[ext_resource type="Texture2D" uid="uid://h72n88wxg3mx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_07.png" id="49_1waa3"]
+[ext_resource type="Texture2D" uid="uid://daoaxorx7elre" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_47.png" id="49_8cjeo"]
+[ext_resource type="Texture2D" uid="uid://bytaepube7h25" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_48.png" id="50_kbh87"]
+[ext_resource type="Texture2D" uid="uid://bx7ann6cr70vl" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_08.png" id="50_m7eev"]
+[ext_resource type="Texture2D" uid="uid://pswg432w686" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_49.png" id="51_47qws"]
+[ext_resource type="Texture2D" uid="uid://bk5on25r4unue" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_09.png" id="51_xt7i1"]
+[ext_resource type="Texture2D" uid="uid://23ytfjbtb0co" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_50.png" id="52_71re5"]
+[ext_resource type="Texture2D" uid="uid://dvyyplkh3a2as" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_10.png" id="52_554rj"]
+[ext_resource type="Texture2D" uid="uid://dpn7ul02jscmr" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_11.png" id="53_0syg7"]
+[ext_resource type="Texture2D" uid="uid://cck4c5n8uwv5a" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_51.png" id="53_44utp"]
+[ext_resource type="Texture2D" uid="uid://chqrk1uvd5gvw" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_52.png" id="54_53t0v"]
+[ext_resource type="Texture2D" uid="uid://bnlqugekig8xk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_12.png" id="54_yqnvy"]
+[ext_resource type="Texture2D" uid="uid://b16a4kkq5b4we" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_53.png" id="55_70gt1"]
+[ext_resource type="Texture2D" uid="uid://d2syhydt1gw81" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_13.png" id="55_tyvj5"]
+[ext_resource type="Texture2D" uid="uid://cj7ei7lkpijyk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_54.png" id="56_n3u4a"]
+[ext_resource type="Texture2D" uid="uid://cvha4kprpf0ia" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_14.png" id="56_w1oiu"]
+[ext_resource type="Texture2D" uid="uid://t3luhoxfyagu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_55.png" id="57_baa7x"]
+[ext_resource type="Texture2D" uid="uid://bhnpckk4852rp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_15.png" id="57_opw5p"]
+[ext_resource type="Texture2D" uid="uid://57v7svtwwxue" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_16.png" id="58_t6lx1"]
+[ext_resource type="Texture2D" uid="uid://cdg7lwbftypow" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_56.png" id="58_t56o5"]
+[ext_resource type="Texture2D" uid="uid://cv2tluwpvpraj" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_17.png" id="59_imjj5"]
+[ext_resource type="Texture2D" uid="uid://cjyol5diei325" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_57.png" id="59_v5xyi"]
+[ext_resource type="Texture2D" uid="uid://b4ano73nrv8rx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_18.png" id="60_d88ht"]
+[ext_resource type="Texture2D" uid="uid://dm2s3o1ef0u4h" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_58.png" id="60_r65bw"]
+[ext_resource type="Texture2D" uid="uid://by0pprw322y0t" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_19.png" id="61_chjv2"]
+[ext_resource type="Texture2D" uid="uid://dbw12dc73tye3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_59.png" id="61_y0ihd"]
+[ext_resource type="Texture2D" uid="uid://td4cbbvvypap" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_20.png" id="62_ejr00"]
+[ext_resource type="Texture2D" uid="uid://gsm21jxxxh5e" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_60.png" id="62_h1bd2"]
+[ext_resource type="Texture2D" uid="uid://c5t7ah2ah86oe" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_21.png" id="63_ol2gd"]
+[ext_resource type="Texture2D" uid="uid://xba480p5pbce" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_61.png" id="63_ouqxy"]
+[ext_resource type="Texture2D" uid="uid://3im72lw0fsbl" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_22.png" id="64_s2sb4"]
+[ext_resource type="Texture2D" uid="uid://ctne3fvsvgvi8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_62.png" id="64_thiq5"]
+[ext_resource type="Texture2D" uid="uid://ck6828j10welb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_63.png" id="65_22qmn"]
+[ext_resource type="Texture2D" uid="uid://diefvukkaqag4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_23.png" id="65_fskld"]
+[ext_resource type="Texture2D" uid="uid://b1l63as1oimd7" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_24.png" id="66_fq2sy"]
+[ext_resource type="Texture2D" uid="uid://dm1nfike15oyr" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_64.png" id="66_ntsvb"]
+[ext_resource type="Texture2D" uid="uid://by8vvmbhkb11p" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_25.png" id="67_a60iw"]
+[ext_resource type="Texture2D" uid="uid://c0oxc86vm0tdb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_000.png" id="67_cgamv"]
+[ext_resource type="Texture2D" uid="uid://c55sllgpqde0r" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_001.png" id="68_eojig"]
+[ext_resource type="Texture2D" uid="uid://6k2xyt7buuen" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_26.png" id="68_tw3f0"]
+[ext_resource type="Texture2D" uid="uid://c0muygvqhr3fl" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_002.png" id="69_kffby"]
+[ext_resource type="Texture2D" uid="uid://dcevurn6l2lgm" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_27.png" id="69_wvycb"]
+[ext_resource type="Texture2D" uid="uid://6yi4ja5qofl1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_003.png" id="70_iqcoh"]
+[ext_resource type="Texture2D" uid="uid://dc06i6kc65b1r" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_28.png" id="70_slc1r"]
+[ext_resource type="Texture2D" uid="uid://cles41n4s85oa" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_29.png" id="71_d1xlg"]
+[ext_resource type="Texture2D" uid="uid://cnlbdfqe4bjm8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_004.png" id="71_hckb4"]
+[ext_resource type="Texture2D" uid="uid://dcjmjskxcaepv" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_005.png" id="72_4xais"]
+[ext_resource type="Texture2D" uid="uid://by7sjmhw7x87l" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_30.png" id="72_o5bir"]
+[ext_resource type="Texture2D" uid="uid://ulonbw4p7720" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_31.png" id="73_ev2x6"]
+[ext_resource type="Texture2D" uid="uid://bs1s1lr2bgecf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_006.png" id="73_n8008"]
+[ext_resource type="Texture2D" uid="uid://cbc8epkjrk0xd" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_32.png" id="74_wprv3"]
+[ext_resource type="Texture2D" uid="uid://b6lc31p7w1jjk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_007.png" id="74_ws7o8"]
+[ext_resource type="Texture2D" uid="uid://c1ye64qau54rf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_33.png" id="75_353rv"]
+[ext_resource type="Texture2D" uid="uid://57yrgkv8jgwd" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_008.png" id="75_p8di6"]
+[ext_resource type="Texture2D" uid="uid://cepb54gbuflqs" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_34.png" id="76_0qpfb"]
+[ext_resource type="Texture2D" uid="uid://dolmdjx7cmtae" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_009.png" id="76_ldf6x"]
+[ext_resource type="Texture2D" uid="uid://bcf1tdpol3s3u" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_010.png" id="77_aqwph"]
+[ext_resource type="Texture2D" uid="uid://cw0w21ncq6mfs" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_35.png" id="77_yexut"]
+[ext_resource type="Texture2D" uid="uid://1qej0oe7kklb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_011.png" id="78_ed1ex"]
+[ext_resource type="Texture2D" uid="uid://colxw3gxv2jo1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_36.png" id="78_euj2b"]
+[ext_resource type="Texture2D" uid="uid://g418dhrjbmcj" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_37.png" id="79_063q0"]
+[ext_resource type="Texture2D" uid="uid://d0ny5j7osliyu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_012.png" id="79_y8cvo"]
+[ext_resource type="Texture2D" uid="uid://bpycdatsbce5s" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_38.png" id="80_a81pi"]
+[ext_resource type="Texture2D" uid="uid://0ceql2yl6xxn" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_013.png" id="80_ofj07"]
+[ext_resource type="Texture2D" uid="uid://cko3wosvuqw5e" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_014.png" id="81_exhc0"]
+[ext_resource type="Texture2D" uid="uid://nm1du1hi4njw" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_39.png" id="81_u06ai"]
+[ext_resource type="Texture2D" uid="uid://djvxgp02jjmey" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_015.png" id="82_3bc5b"]
+[ext_resource type="Texture2D" uid="uid://bkfotk2fddfy0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_40.png" id="82_ups43"]
+[ext_resource type="Texture2D" uid="uid://b2gsjh2b0rmvk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_41.png" id="83_3skxg"]
+[ext_resource type="Texture2D" uid="uid://cplgef535f4ne" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_016.png" id="83_tj4sj"]
+[ext_resource type="Texture2D" uid="uid://u2rwbnr6uoxo" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_017.png" id="84_65me0"]
+[ext_resource type="Texture2D" uid="uid://bmt8sbh5bg6og" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_42.png" id="84_k4cjh"]
+[ext_resource type="Texture2D" uid="uid://b2rhye4v7s1dy" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_43.png" id="85_ovswf"]
+[ext_resource type="Texture2D" uid="uid://clfpkx4eu67o4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_018.png" id="85_uli2h"]
+[ext_resource type="Texture2D" uid="uid://3fycefpd7l24" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_44.png" id="86_38y5i"]
+[ext_resource type="Texture2D" uid="uid://cyuemgdhnmc05" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_019.png" id="86_oxg16"]
+[ext_resource type="Texture2D" uid="uid://b1eowd5xdaiow" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_45.png" id="87_6l5w2"]
+[ext_resource type="Texture2D" uid="uid://cnvywgxcyqql2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_020.png" id="87_l7kq8"]
+[ext_resource type="Texture2D" uid="uid://7a85mn6evtba" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_46.png" id="88_ds4pr"]
+[ext_resource type="Texture2D" uid="uid://byueurfsmyo7r" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_021.png" id="88_ntlco"]
+[ext_resource type="Texture2D" uid="uid://cxh56oskqv1x8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_022.png" id="89_n8mbv"]
+[ext_resource type="Texture2D" uid="uid://u5twgip881de" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_47.png" id="89_v375m"]
+[ext_resource type="Texture2D" uid="uid://b5ro17n3lv4pg" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_48.png" id="90_1t1ls"]
+[ext_resource type="Texture2D" uid="uid://j3wd170lqneg" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_023.png" id="90_g6e1r"]
+[ext_resource type="Texture2D" uid="uid://bk28kw4wsdo47" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_49.png" id="91_1tkg4"]
+[ext_resource type="Texture2D" uid="uid://bf8jhc00e6xpw" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_024.png" id="91_4r0s0"]
+[ext_resource type="Texture2D" uid="uid://dmnv3756ueuhu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_025.png" id="92_farfv"]
+[ext_resource type="Texture2D" uid="uid://deuif5cd7njxs" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_50.png" id="92_lpt00"]
+[ext_resource type="Texture2D" uid="uid://b55w1v0aaa0hb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_51.png" id="93_fj566"]
+[ext_resource type="Texture2D" uid="uid://3yprbr3bg38a" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_026.png" id="93_jvude"]
+[ext_resource type="Texture2D" uid="uid://b50f74i0h6cy7" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_027.png" id="94_omrpk"]
+[ext_resource type="Texture2D" uid="uid://ciast0t4e738w" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_52.png" id="94_w04cn"]
+[ext_resource type="Texture2D" uid="uid://b5u6gsbrjhj2k" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_53.png" id="95_m4ggx"]
+[ext_resource type="Texture2D" uid="uid://kqsinvf0unrv" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_028.png" id="95_w7a46"]
+[ext_resource type="Texture2D" uid="uid://btwdde5rxiqut" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_54.png" id="96_6sa4x"]
+[ext_resource type="Texture2D" uid="uid://b71jmqhv4phgk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_029.png" id="96_mxbwr"]
+[ext_resource type="Texture2D" uid="uid://7pved0msgwou" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_030.png" id="97_0f1j8"]
+[ext_resource type="Texture2D" uid="uid://3bjj7f0nx10b" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_55.png" id="97_8phem"]
+[ext_resource type="Texture2D" uid="uid://6ea5j0nb7k6f" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_56.png" id="98_jqjk3"]
+[ext_resource type="Texture2D" uid="uid://0wl18ojth6y7" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_031.png" id="98_o2ol7"]
+[ext_resource type="Texture2D" uid="uid://ck0ss6jpy2l1i" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_032.png" id="99_bc58c"]
+[ext_resource type="Texture2D" uid="uid://bq8uscxuxomai" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_57.png" id="99_qflvt"]
+[ext_resource type="Texture2D" uid="uid://rd0udlavfsun" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_033.png" id="100_i0v00"]
+[ext_resource type="Texture2D" uid="uid://dcrj7g00xm5yw" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_58.png" id="100_t7e8h"]
+[ext_resource type="Texture2D" uid="uid://b7htwda2xst2x" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_034.png" id="101_4n6b7"]
+[ext_resource type="Texture2D" uid="uid://civxtmlyq51c2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_59.png" id="101_g8tx6"]
+[ext_resource type="Texture2D" uid="uid://ctkaweeveeo5j" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_60.png" id="102_7kgus"]
+[ext_resource type="Texture2D" uid="uid://buta1jg8ilrfk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_035.png" id="102_kkqbl"]
+[ext_resource type="Texture2D" uid="uid://du37u0ymtgesf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_036.png" id="103_yag3h"]
+[ext_resource type="Texture2D" uid="uid://bu0waf61v7lg3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_037.png" id="104_jndne"]
+[ext_resource type="Texture2D" uid="uid://cgypny5x5x0ne" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_038.png" id="105_k4yb5"]
+[ext_resource type="Texture2D" uid="uid://b3r3o11w6qf12" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_039.png" id="106_422jr"]
+[ext_resource type="Texture2D" uid="uid://cf6vvy0aardsq" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_040.png" id="107_rwk61"]
+[ext_resource type="Texture2D" uid="uid://btiompje1spxh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_041.png" id="108_almd5"]
+[ext_resource type="Texture2D" uid="uid://ptvxvm1higyu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_042.png" id="109_wn52e"]
+[ext_resource type="Texture2D" uid="uid://djiy5jpt2rahf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_043.png" id="110_132dn"]
+[ext_resource type="Texture2D" uid="uid://00lpsmqtqch8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_044.png" id="111_3l8hs"]
+[ext_resource type="Texture2D" uid="uid://bxego2f665453" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_045.png" id="112_fnmks"]
+[ext_resource type="Texture2D" uid="uid://dtqtmp2g717wu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_046.png" id="113_jn2wg"]
+[ext_resource type="Texture2D" uid="uid://bmuwbtnnwx7b6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_047.png" id="114_nw2xh"]
+[ext_resource type="Texture2D" uid="uid://buysv18h21qbd" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_048.png" id="115_s4i30"]
+[ext_resource type="Texture2D" uid="uid://bbt3vubeugjb8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_049.png" id="116_nwm3q"]
+[ext_resource type="Texture2D" uid="uid://m8jl672vfphx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_050.png" id="117_eimye"]
+[ext_resource type="Texture2D" uid="uid://bkh7ac5pjhgm7" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_051.png" id="118_hwkap"]
+[ext_resource type="Texture2D" uid="uid://bbml4gn32i662" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_052.png" id="119_b34ac"]
+[ext_resource type="Texture2D" uid="uid://cfqytfm8digpc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_053.png" id="120_mdg1e"]
+[ext_resource type="Texture2D" uid="uid://cef1b2ug6ycao" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_054.png" id="121_we86y"]
+[ext_resource type="Texture2D" uid="uid://c14uj3durm71u" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_055.png" id="122_nuqtk"]
+[ext_resource type="Texture2D" uid="uid://b2ckgkko3bevh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_056.png" id="123_7tw7h"]
+[ext_resource type="Texture2D" uid="uid://bredkughxdgcw" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_057.png" id="124_irro4"]
+[ext_resource type="Texture2D" uid="uid://gu3y601718bb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_058.png" id="125_iau7m"]
+[ext_resource type="Texture2D" uid="uid://cfc8g5vbjxy3o" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_059.png" id="126_qiyhx"]
+[ext_resource type="Texture2D" uid="uid://nf7pvsaynxtb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_060.png" id="127_vbhvk"]
+[ext_resource type="Texture2D" uid="uid://brmoi5xldi6xm" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_061.png" id="128_4q771"]
+[ext_resource type="Texture2D" uid="uid://cr4c8gko8q23l" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_062.png" id="129_u64ij"]
+[ext_resource type="Texture2D" uid="uid://dmvf06v4kdktm" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_063.png" id="130_t5r5c"]
+[ext_resource type="Texture2D" uid="uid://d1j2be2kgn6n6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_064.png" id="131_r5yqo"]
+[ext_resource type="Texture2D" uid="uid://bj84mt3yvl3xh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_065.png" id="132_ox2s5"]
+[ext_resource type="Texture2D" uid="uid://bqbolv2kduq1l" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_066.png" id="133_r27mm"]
+[ext_resource type="Texture2D" uid="uid://criya3yqvk2qo" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_067.png" id="134_ubmjt"]
+[ext_resource type="Texture2D" uid="uid://byo1ohxfmq48d" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_068.png" id="135_ti6jo"]
+[ext_resource type="Texture2D" uid="uid://dbxs8b4e7myu1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_069.png" id="136_02sjb"]
+[ext_resource type="Texture2D" uid="uid://ugbm7cr80xv0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_070.png" id="137_ywhto"]
+[ext_resource type="Texture2D" uid="uid://dgcplmmi2kxyn" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_071.png" id="138_frgwr"]
+[ext_resource type="Texture2D" uid="uid://dyh7ge518cmhn" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_072.png" id="139_mysa4"]
+[ext_resource type="Texture2D" uid="uid://dmrg5aexks014" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_073.png" id="140_mp46d"]
+[ext_resource type="Texture2D" uid="uid://bynefojousnvs" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_074.png" id="141_5til3"]
+[ext_resource type="Texture2D" uid="uid://b151rgq0xtb2h" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_075.png" id="142_14a2g"]
+[ext_resource type="Texture2D" uid="uid://dso2luf0hrnl0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_076.png" id="143_d86nq"]
+[ext_resource type="Texture2D" uid="uid://w32drfdxm3wk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_077.png" id="144_7f0bh"]
+[ext_resource type="Texture2D" uid="uid://d4ltpcx4vtn0k" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_078.png" id="145_yia5n"]
+[ext_resource type="Texture2D" uid="uid://bi8d4h1ftqslp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_079.png" id="146_kxs4h"]
+[ext_resource type="Texture2D" uid="uid://6vypybt82865" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_080.png" id="147_2n54p"]
+[ext_resource type="Texture2D" uid="uid://i5uj6klnn7lj" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_081.png" id="148_p48lg"]
+[ext_resource type="Texture2D" uid="uid://cuanuc40xa6c6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_082.png" id="149_3er2c"]
+[ext_resource type="Texture2D" uid="uid://byinhvleinp72" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_083.png" id="150_2m3px"]
+[ext_resource type="Texture2D" uid="uid://ct63d2ujdj767" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_084.png" id="151_n2sgi"]
+[ext_resource type="Texture2D" uid="uid://8t5tp82s7ox0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_085.png" id="152_h1yrm"]
+[ext_resource type="Texture2D" uid="uid://b1fmsvhelyrt3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_086.png" id="153_kbiue"]
+[ext_resource type="Texture2D" uid="uid://dph4mtghiadl5" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_087.png" id="154_hs446"]
+[ext_resource type="Texture2D" uid="uid://bibdue6ruscg1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_088.png" id="155_tldck"]
+[ext_resource type="Texture2D" uid="uid://cvpg3ttvhvk7x" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_089.png" id="156_dxtl2"]
+[ext_resource type="Texture2D" uid="uid://1cgducasx1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_090.png" id="157_jiroc"]
+[ext_resource type="Texture2D" uid="uid://c3oj1m710hqvh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_091.png" id="158_uvru8"]
+[ext_resource type="Texture2D" uid="uid://bgsyqntcmicjk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_092.png" id="159_rab1t"]
+[ext_resource type="Texture2D" uid="uid://d168tavtexos8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_093.png" id="160_b4jx3"]
+[ext_resource type="Texture2D" uid="uid://b2ml7c0b42x4g" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_094.png" id="161_ehssv"]
+[ext_resource type="Texture2D" uid="uid://hbb62mkhoujv" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_095.png" id="162_18snk"]
+[ext_resource type="Texture2D" uid="uid://b26yo42fr1350" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_096.png" id="163_7tccy"]
+[ext_resource type="Texture2D" uid="uid://bkgkkaktekodq" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_097.png" id="164_k0pkk"]
+[ext_resource type="Texture2D" uid="uid://ct7e4vlg6om7y" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_098.png" id="165_tkkck"]
+[ext_resource type="Texture2D" uid="uid://l88agqs6oovo" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_099.png" id="166_w25xg"]
+[ext_resource type="Texture2D" uid="uid://cs21vdifhyvhy" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_100.png" id="167_0tvjc"]
+[ext_resource type="Texture2D" uid="uid://ddkgkxvg3uj0n" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_101.png" id="168_rs6s4"]
+[ext_resource type="Texture2D" uid="uid://ci1eora8emobw" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_102.png" id="169_wnfy0"]
+[ext_resource type="Texture2D" uid="uid://cel2hmqyiiplb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_103.png" id="170_m2e2w"]
+[ext_resource type="Texture2D" uid="uid://0pw167olwfy2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_104.png" id="171_f5xhu"]
+[ext_resource type="Texture2D" uid="uid://cqppbu5iv2fxp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_105.png" id="172_dt3b5"]
+[ext_resource type="Texture2D" uid="uid://ceu1rsaqx75w0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_106.png" id="173_ksrr2"]
+[ext_resource type="Texture2D" uid="uid://xni4go51jhnx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_107.png" id="174_o7asj"]
+[ext_resource type="Texture2D" uid="uid://ps1nrdvllfk6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_108.png" id="175_4q8hc"]
+[ext_resource type="Texture2D" uid="uid://c1cja11xr8h4y" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_109.png" id="176_scr2d"]
+[ext_resource type="Texture2D" uid="uid://yeuqolt1p55k" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_110.png" id="177_oytum"]
+[ext_resource type="Texture2D" uid="uid://dnt8a6ltjtout" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_111.png" id="178_wsmhb"]
+[ext_resource type="Texture2D" uid="uid://cvb8cty8uuna6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_112.png" id="179_fs2i1"]
+[ext_resource type="Texture2D" uid="uid://cycuwvghofe2l" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_113.png" id="180_e64k1"]
+[ext_resource type="Texture2D" uid="uid://ccm5oooxekqpp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_114.png" id="181_lgkxh"]
+[ext_resource type="Texture2D" uid="uid://ujkd7fpvlb0n" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_115.png" id="182_pqhcu"]
+[ext_resource type="Texture2D" uid="uid://bdxy0306v67wi" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_116.png" id="183_r8grv"]
+[ext_resource type="Texture2D" uid="uid://doeia6v1cxwtc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_117.png" id="184_6crof"]
+[ext_resource type="Texture2D" uid="uid://cwic0wk1wanpf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_118.png" id="185_syb65"]
+[ext_resource type="Texture2D" uid="uid://ca6fffqtvuqny" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_119.png" id="186_gg60q"]
+[ext_resource type="Texture2D" uid="uid://b4367ux5envdb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_120.png" id="187_qjhaf"]
+[ext_resource type="Texture2D" uid="uid://dpnkee0eo5111" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_121.png" id="188_j6f8j"]
+[ext_resource type="Texture2D" uid="uid://uq4yeko06ygh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_122.png" id="189_3muop"]
+[ext_resource type="Texture2D" uid="uid://bkwn5mmx5bjml" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_123.png" id="190_l2qoq"]
+[ext_resource type="Texture2D" uid="uid://dqqpmi2outt6m" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_124.png" id="191_j7r6x"]
+[ext_resource type="Texture2D" uid="uid://dudnr3tp8xdq6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_125.png" id="192_odmce"]
+[ext_resource type="Texture2D" uid="uid://bxcm7bondy6ys" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_126.png" id="193_u0aus"]
+[ext_resource type="Texture2D" uid="uid://diao8itbs5dju" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_127.png" id="194_5m0ic"]
+[ext_resource type="Texture2D" uid="uid://cbkf1pfe5wd8d" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_128.png" id="195_ieo2x"]
+[ext_resource type="Texture2D" uid="uid://bcsrq3p3rd7vx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_129.png" id="196_ragtl"]
+[ext_resource type="Texture2D" uid="uid://bccgt6ac7unyu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_130.png" id="197_1t4c0"]
+[ext_resource type="Texture2D" uid="uid://c7uonicv0baq6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_131.png" id="198_wuc83"]
+[ext_resource type="Texture2D" uid="uid://cfyukvdcy3kx1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_132.png" id="199_3sium"]
+[ext_resource type="Texture2D" uid="uid://d2rgdjctgqdvk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_133.png" id="200_lxbky"]
+[ext_resource type="Texture2D" uid="uid://cmln7umy4i64g" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_134.png" id="201_fa6ea"]
+[ext_resource type="Texture2D" uid="uid://m0o0jsbanijj" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_135.png" id="202_4jg14"]
+[ext_resource type="Texture2D" uid="uid://c38ac3w4vb42v" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_136.png" id="203_s4o3b"]
+[ext_resource type="Texture2D" uid="uid://cqdm1t3jm4ql7" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_137.png" id="204_x114c"]
+[ext_resource type="Texture2D" uid="uid://b06us7pwhocxb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_138.png" id="205_dvjc4"]
+[ext_resource type="Texture2D" uid="uid://5xb0c2p6utaf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_139.png" id="206_2y2mq"]
+[ext_resource type="Texture2D" uid="uid://b1uaew2qp058b" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_140.png" id="207_utfsv"]
+[ext_resource type="Texture2D" uid="uid://dltlm1dydpfnt" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_141.png" id="208_coxo1"]
+[ext_resource type="Texture2D" uid="uid://dr3rtchaj87tr" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_142.png" id="209_qnd2x"]
+[ext_resource type="Texture2D" uid="uid://5h8ux10jo5m4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_143.png" id="210_kkhrn"]
+[ext_resource type="Texture2D" uid="uid://k2ao6816iul4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_144.png" id="211_eu80m"]
+[ext_resource type="Texture2D" uid="uid://74kbfl5sxy2y" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_145.png" id="212_58f5h"]
+[ext_resource type="Texture2D" uid="uid://bsk5j3j3s4nws" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_146.png" id="213_adcgj"]
+[ext_resource type="Texture2D" uid="uid://d0nw7tcr1yn5g" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_147.png" id="214_k3ooj"]
+[ext_resource type="Texture2D" uid="uid://dt2wfk8s3q2vn" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_148.png" id="215_jmgca"]
+[ext_resource type="Texture2D" uid="uid://cxmp2w3jaeq46" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_149.png" id="216_q55pg"]
+[ext_resource type="Texture2D" uid="uid://dvr8jo4kj52vb" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_150.png" id="217_77th5"]
+[ext_resource type="Texture2D" uid="uid://dtfuk6npoljge" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_151.png" id="218_vdy33"]
+[ext_resource type="Texture2D" uid="uid://dcx2lpt0pbnr1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_152.png" id="219_sp32j"]
+[ext_resource type="Texture2D" uid="uid://cs51s2empr6ny" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_153.png" id="220_6dmpq"]
+[ext_resource type="Texture2D" uid="uid://c3wwdbklrh3n2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_154.png" id="221_ixppi"]
+[ext_resource type="Texture2D" uid="uid://ckheepijf5all" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_155.png" id="222_voxwp"]
+[ext_resource type="Texture2D" uid="uid://ykmnerm85nbf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_156.png" id="223_pi1lk"]
+[ext_resource type="Texture2D" uid="uid://cd01jd7ecawal" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_157.png" id="224_agd8l"]
+[ext_resource type="Texture2D" uid="uid://djf25w6jpnuqu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_158.png" id="225_y7xlo"]
+[ext_resource type="Texture2D" uid="uid://dw4t6vu7rfdv" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_159.png" id="226_7xmdf"]
+[ext_resource type="Texture2D" uid="uid://b0aiykauk5nq4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_160.png" id="227_hcj5v"]
+[ext_resource type="Texture2D" uid="uid://bqx8pxi68p53j" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_161.png" id="228_unuw6"]
+[ext_resource type="Texture2D" uid="uid://riuu6ffx075s" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_162.png" id="229_bdhsf"]
+[ext_resource type="Texture2D" uid="uid://kjv18mmiygmr" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_163.png" id="230_bdb6w"]
+[ext_resource type="Texture2D" uid="uid://ddp0spl1n30jf" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_164.png" id="231_sr7wf"]
+[ext_resource type="Texture2D" uid="uid://bad7w175q1r8m" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_165.png" id="232_tgtcb"]
+[ext_resource type="Texture2D" uid="uid://crp50n7gm0lr4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_166.png" id="233_1vmcy"]
+[ext_resource type="Texture2D" uid="uid://dd161bexxc7t2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_167.png" id="234_un6ay"]
+[ext_resource type="Texture2D" uid="uid://vcy6km1ibdue" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_168.png" id="235_rp7y3"]
+[ext_resource type="Texture2D" uid="uid://bbrsounmgfv1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_169.png" id="236_uamp7"]
+[ext_resource type="Texture2D" uid="uid://ds5b2e2eqvmdp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_170.png" id="237_l0fht"]
+[ext_resource type="Texture2D" uid="uid://celo0r2sk8pq7" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_171.png" id="238_0x5kr"]
+[ext_resource type="Texture2D" uid="uid://d0xhvkdbrno2t" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_172.png" id="239_iw6o5"]
+[ext_resource type="Texture2D" uid="uid://dturefjerv83h" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_173.png" id="240_44bmb"]
+[ext_resource type="Texture2D" uid="uid://tn7juet1xexh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_174.png" id="241_k8k33"]
+[ext_resource type="Texture2D" uid="uid://dpj82fyfqrwrk" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_175.png" id="242_f78ux"]
+[ext_resource type="Texture2D" uid="uid://b50jy7i81kaib" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_176.png" id="243_olxg3"]
+[ext_resource type="Texture2D" uid="uid://c02rbhkincru2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_177.png" id="244_c2ngw"]
+[ext_resource type="Texture2D" uid="uid://cf1pa3h6a3nxg" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_178.png" id="245_ou2o7"]
+[ext_resource type="Texture2D" uid="uid://b7i8d546ub1xp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_179.png" id="246_cjobx"]
+[ext_resource type="Texture2D" uid="uid://dgigvdqvadutt" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/shootRocket180/Armature_shootRockets_180.png" id="247_v7h54"]
+[ext_resource type="Texture2D" uid="uid://b8nep071u5dm4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_00.png" id="310_ibgbr"]
+[ext_resource type="Texture2D" uid="uid://co7ycjudkptwa" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_01.png" id="311_rkvg6"]
+[ext_resource type="Texture2D" uid="uid://dvym0nnfxtm53" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_02.png" id="312_nlnqj"]
+[ext_resource type="Texture2D" uid="uid://enckrt5uyw00" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_03.png" id="313_v5u6x"]
+[ext_resource type="Texture2D" uid="uid://dbs5rg8rwythl" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_04.png" id="314_lam5d"]
+[ext_resource type="Texture2D" uid="uid://cbs1mwpjj6flc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_05.png" id="315_dnirf"]
+[ext_resource type="Texture2D" uid="uid://ccf10553pcx7g" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_06.png" id="316_a3pck"]
+[ext_resource type="Texture2D" uid="uid://d2ryihmjgjjyc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_07.png" id="317_3lvb7"]
+[ext_resource type="Texture2D" uid="uid://bq28y5exs5ssj" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_08.png" id="318_24ema"]
+[ext_resource type="Texture2D" uid="uid://kl2fx7ol34wq" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_09.png" id="319_hoam8"]
+[ext_resource type="Texture2D" uid="uid://hc8718sj3qf3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_10.png" id="320_1w7tk"]
+[ext_resource type="Texture2D" uid="uid://ck5ciijmp6i71" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_11.png" id="321_a8qrn"]
+[ext_resource type="Texture2D" uid="uid://bi6smn763rsrp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_12.png" id="322_krm4a"]
+[ext_resource type="Texture2D" uid="uid://b1sgqx8up6c2f" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_13.png" id="323_uksls"]
+[ext_resource type="Texture2D" uid="uid://j4bok17234ai" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_14.png" id="324_8ssft"]
+[ext_resource type="Texture2D" uid="uid://bt136nnui0gf2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_15.png" id="325_km6ae"]
+[ext_resource type="Texture2D" uid="uid://jj3yvrr0tek0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_16.png" id="326_g1q5e"]
+[ext_resource type="Texture2D" uid="uid://ma05jg6f0meg" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_17.png" id="327_is6og"]
+[ext_resource type="Texture2D" uid="uid://cfh2uwwa0n50o" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_18.png" id="328_gupix"]
+[ext_resource type="Texture2D" uid="uid://coconrtmdq253" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_19.png" id="329_ijw1o"]
+[ext_resource type="Texture2D" uid="uid://ctl0dgde0rlc5" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_20.png" id="330_mv48x"]
+[ext_resource type="Texture2D" uid="uid://bvlrrmnererd0" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_21.png" id="331_jsjid"]
+[ext_resource type="Texture2D" uid="uid://ckt2oendi0nh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_22.png" id="332_vbgwx"]
+[ext_resource type="Texture2D" uid="uid://btg0fvmcpkcny" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_23.png" id="333_5odqn"]
+[ext_resource type="Texture2D" uid="uid://eabg0bpexh7l" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_24.png" id="334_id37w"]
+[ext_resource type="Texture2D" uid="uid://1kralhvvq6tl" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_25.png" id="335_ohj3b"]
+[ext_resource type="Texture2D" uid="uid://ctfmwhkk32ngi" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_26.png" id="336_qcxei"]
+[ext_resource type="Texture2D" uid="uid://b3l72ph37l1ms" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_27.png" id="337_4570k"]
+[ext_resource type="Texture2D" uid="uid://bq4lj65tj6f72" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_28.png" id="338_xvgfl"]
+[ext_resource type="Texture2D" uid="uid://pive2q8di4w5" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_29.png" id="339_hrcwa"]
+[ext_resource type="Texture2D" uid="uid://cngarb5qfi4w" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_30.png" id="340_k1fxc"]
+[ext_resource type="Texture2D" uid="uid://d37absf52dbeh" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_31.png" id="341_rywxp"]
+[ext_resource type="Texture2D" uid="uid://bil5p801dllag" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_32.png" id="342_olnhy"]
+[ext_resource type="Texture2D" uid="uid://bo7hhdq7ggtbc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_33.png" id="343_pi2q3"]
+[ext_resource type="Texture2D" uid="uid://bh5f0tjtx3qak" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_34.png" id="344_w774v"]
+[ext_resource type="Texture2D" uid="uid://cchs35caejiw8" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_35.png" id="345_mht0v"]
+[ext_resource type="Texture2D" uid="uid://oa0afsib43rw" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_36.png" id="346_wxwms"]
+[ext_resource type="Texture2D" uid="uid://hra138afkuf3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_37.png" id="347_nopm4"]
+[ext_resource type="Texture2D" uid="uid://dhpn7fft5cpbp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_38.png" id="348_uekcs"]
+[ext_resource type="Texture2D" uid="uid://61ihrugwnun3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_39.png" id="349_tnwpx"]
+[ext_resource type="Texture2D" uid="uid://bb3ol3awyvere" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_40.png" id="350_8584m"]
+[ext_resource type="Texture2D" uid="uid://crgxqibmwf57i" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_41.png" id="351_k1gq8"]
+[ext_resource type="Texture2D" uid="uid://da260u3gj01o1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_42.png" id="352_yw8qi"]
+[ext_resource type="Texture2D" uid="uid://dlorrv5ajwnjx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_43.png" id="353_bhdjl"]
+[ext_resource type="Texture2D" uid="uid://dow15b0ujdnl1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_44.png" id="354_qqayr"]
+[ext_resource type="Texture2D" uid="uid://dsvbee5ctwu3x" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_45.png" id="355_d0wm0"]
+[ext_resource type="Texture2D" uid="uid://bfsufthueptp" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_46.png" id="356_au1bk"]
+[ext_resource type="Texture2D" uid="uid://cdbyoamwl581k" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_47.png" id="357_g3jx4"]
+[ext_resource type="Texture2D" uid="uid://chhkaxpxdo8c1" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_48.png" id="358_7ys0y"]
+[ext_resource type="Texture2D" uid="uid://cmq7p01ohv42e" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_49.png" id="359_qfbdo"]
+[ext_resource type="Texture2D" uid="uid://cqth2ysq6i0go" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_50.png" id="360_wcjar"]
+[ext_resource type="Texture2D" uid="uid://m8extkiu3tg3" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_51.png" id="361_8h5du"]
+[ext_resource type="Texture2D" uid="uid://b2terg2ppgfx4" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_52.png" id="362_vk1ih"]
+[ext_resource type="Texture2D" uid="uid://dspw0ai0au4iu" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_53.png" id="363_lj6mn"]
+[ext_resource type="Texture2D" uid="uid://dimt0snpadps6" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_54.png" id="364_i0mtt"]
+[ext_resource type="Texture2D" uid="uid://blegqj4yrmw2p" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_55.png" id="365_avg0k"]
+[ext_resource type="Texture2D" uid="uid://cd3exv5vklx7r" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_56.png" id="366_0e0ug"]
+[ext_resource type="Texture2D" uid="uid://csrramb323630" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_57.png" id="367_p1ib5"]
+[ext_resource type="Texture2D" uid="uid://dsielhypflwqx" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_58.png" id="368_2kdgp"]
+[ext_resource type="Texture2D" uid="uid://cpuq1rwjouw8t" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_59.png" id="369_1djf3"]
+[ext_resource type="Texture2D" uid="uid://03oqbik7g672" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/walk60/Armature_walk_60.png" id="370_qlql3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gxvd"]
+radius = 120.814
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lo8pa"]
+radius = 1497.14
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r2ut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l6f5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7qh0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pjo5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i11vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fejg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xoqyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_12fei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_11xcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qrg05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c2o2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4c8n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rack3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_y4fn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wcqv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xikbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_b24ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u1gcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_axr2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7j6bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fgmje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vgv1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p6igt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_c0uac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_iunba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jlf4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tcwbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3a8jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n7st6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_t3yh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_hnq1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rw6nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_icfx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_i1kjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rqhjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ikouf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kf44u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4tvg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_xfxqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_s1smj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_e5uxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_us4nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_jawxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_wb7a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_y7kcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_3ys5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_hrun3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ixu6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_8cjeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_kbh87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_47qws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_71re5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_44utp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_53t0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_70gt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_n3u4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_baa7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_t56o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_v5xyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_r65bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_y0ihd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_h1bd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ouqxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_thiq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_22qmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ntsvb")
+}],
+"loop": false,
+"name": &"Aiming",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cfc5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_mjqrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_x133u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_i0l1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_p1iko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_0ibvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gr4lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_1waa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_m7eev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_xt7i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_554rj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_0syg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_yqnvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_tyvj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_w1oiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_opw5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_t6lx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_imjj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_d88ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_chjv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ejr00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ol2gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_s2sb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_fskld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_fq2sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_a60iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_tw3f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_wvycb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_slc1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_d1xlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_o5bir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ev2x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_wprv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_353rv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_0qpfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_yexut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_euj2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_063q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_a81pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_u06ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_ups43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_3skxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_k4cjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ovswf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_38y5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_6l5w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_ds4pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_v375m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_1t1ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_1tkg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_lpt00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_fj566")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_w04cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_m4ggx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_6sa4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_8phem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_jqjk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_qflvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_t7e8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_g8tx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_7kgus")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_cgamv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_eojig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_kffby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_iqcoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_hckb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_4xais")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_n8008")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ws7o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_p8di6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ldf6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_aqwph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ed1ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_y8cvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_ofj07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_exhc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_3bc5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_tj4sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_65me0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_uli2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_oxg16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_l7kq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_ntlco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_n8mbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_g6e1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_4r0s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_farfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_jvude")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_omrpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_w7a46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_mxbwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_0f1j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_o2ol7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_bc58c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_i0v00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_4n6b7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_kkqbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_yag3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_jndne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_k4yb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_422jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_rwk61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_almd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_wn52e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_132dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_3l8hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_fnmks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_jn2wg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_nw2xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_s4i30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_nwm3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_eimye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_hwkap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_b34ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_mdg1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_we86y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_nuqtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_7tw7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_irro4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_iau7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_qiyhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_vbhvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_4q771")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_u64ij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_t5r5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_r5yqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_ox2s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_r27mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_ubmjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_ti6jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_02sjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_ywhto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_frgwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_mysa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_mp46d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_5til3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_14a2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_d86nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_7f0bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_yia5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_kxs4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_2n54p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_p48lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_3er2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_2m3px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_n2sgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_h1yrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_kbiue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_hs446")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_tldck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_dxtl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_jiroc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_uvru8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_rab1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_b4jx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_ehssv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_18snk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_7tccy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_k0pkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_tkkck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_w25xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_0tvjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_rs6s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_wnfy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_m2e2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_f5xhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_dt3b5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_ksrr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_o7asj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_4q8hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_scr2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_oytum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_wsmhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_fs2i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_e64k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_lgkxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_pqhcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_r8grv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_6crof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_syb65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_gg60q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_qjhaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_j6f8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_3muop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_l2qoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_j7r6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_odmce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_u0aus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_5m0ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_ieo2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_ragtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_1t4c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_wuc83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_3sium")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_lxbky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_fa6ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_4jg14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_s4o3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_x114c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_dvjc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_2y2mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_utfsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_coxo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_qnd2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_kkhrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_eu80m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_58f5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_adcgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_k3ooj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_jmgca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_q55pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_77th5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_vdy33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_sp32j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_6dmpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_ixppi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_voxwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_pi1lk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_agd8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_y7xlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_7xmdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_hcj5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_unuw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_bdhsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_bdb6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_sr7wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_tgtcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_1vmcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_un6ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_rp7y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_uamp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_l0fht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_0x5kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_iw6o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_44bmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_k8k33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_f78ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_olxg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_c2ngw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_ou2o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_cjobx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_v7h54")
+}],
+"loop": true,
+"name": &"Shooting",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("310_ibgbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_rkvg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_nlnqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_v5u6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_lam5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_dnirf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_a3pck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_3lvb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_24ema")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_hoam8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_1w7tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_a8qrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_krm4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_uksls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_8ssft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_km6ae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("326_g1q5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_is6og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_gupix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_ijw1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_mv48x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_jsjid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_vbgwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_5odqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_id37w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_ohj3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_qcxei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_4570k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_xvgfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_hrcwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_k1fxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_rywxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_olnhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_pi2q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_w774v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_mht0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_wxwms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_nopm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_uekcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_tnwpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_8584m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_k1gq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_yw8qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_bhdjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_qqayr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_d0wm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_au1bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_g3jx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_7ys0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_qfbdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_wcjar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_8h5du")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_vk1ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_lj6mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_i0mtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_avg0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("366_0e0ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_p1ib5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_2kdgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_1djf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_qlql3")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 60.0
+}]
+
+[node name="RobotWithRocket" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+collision_layer = 4
+collision_mask = 49
+script = ExtResource("1_syrfv")
+projectile_scene = ExtResource("2_invwa")
+
+[node name="HitBox" type="Area2D" parent="."]
+visible = false
+rotation = 1.5708
+scale = Vector2(1, 1)
+collision_layer = 4
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+rotation = 1.5708
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_4gxvd")
+
+[node name="AttackBox" type="Area2D" parent="."]
+visible = false
+rotation = 1.5708
+scale = Vector2(1, 1)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
+rotation = 1.5708
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_lo8pa")
+debug_color = Color(0.961248, 0, 0.511433, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+rotation = 1.5708
+texture = ExtResource("1_cfc5d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_4r2ut")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.368605

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqgfgifsn55j8"]
+
+[ext_resource type="Script" path="res://Projectiles/rocket.gd" id="1_pr3ga"]
+[ext_resource type="Texture2D" uid="uid://dltgmtuyki1ak" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/Rocket.png" id="1_v8oxh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5e1qx"]
+radius = 6.0
+height = 38.0
+
+[node name="Rocket" type="Area2D"]
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("1_pr3ga")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+texture = ExtResource("1_v8oxh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_5e1qx")
