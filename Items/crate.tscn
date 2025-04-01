@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbv4kba1678oc"]
+
+[ext_resource type="Texture2D" uid="uid://dxhfuq67eyowy" path="res://graphics/graphics/floors doors and airlocks/crate 02.png" id="1_60j8n"]
+[ext_resource type="Script" path="res://Items/crate.gd" id="1_t3mew"]
+[ext_resource type="PackedScene" uid="uid://bmmm5ctvt5o8y" path="res://Items/battery_pick_up.tscn" id="2_qi2ph"]
+[ext_resource type="PackedScene" uid="uid://b0wjk660yl5gn" path="res://Items/half_battery_pick_up.tscn" id="3_h0thn"]
+[ext_resource type="PackedScene" uid="uid://tsyo83ceubh0" path="res://Items/health_pack.tscn" id="4_2fn1y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ko11i"]
+size = Vector2(33, 40)
+
+[node name="Crate" type="StaticBody2D"]
+script = ExtResource("1_t3mew")
+item_scenes = Array[PackedScene]([ExtResource("2_qi2ph"), ExtResource("4_2fn1y"), ExtResource("3_h0thn")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_60j8n")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ko11i")
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SpawnPoint1" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(13, 14)
+rotation = -0.229361
+
+[node name="SpawnPoint2" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(-10, 15)
+rotation = 0.260959
+
+[node name="SpawnPoint3" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(0, 12)
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

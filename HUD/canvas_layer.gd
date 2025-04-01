@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-@onready var battery_bar: ProgressBar = $Control/BatteryBar
+@onready var battery_bar: TextureProgressBar = $Control/BatteryBar
 @onready var battery_label: Label = $Control/BatteryLabel
-@onready var health_bar: ProgressBar = $Control/HealthBar
+@onready var health_bar: TextureProgressBar = $Control/HealthBar
 @onready var health_label: Label = $Control/HealthLabel
 
 func _ready():
@@ -31,4 +31,4 @@ func update_health(current: int, max: int):
 
 	health_bar.max_value = max
 	health_bar.value = current
-	health_label.text = "Health: " + str(current) + "/" + str(max)
+	health_label.text = "Health: " + str(current)

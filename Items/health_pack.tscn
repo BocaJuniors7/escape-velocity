@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://tsyo83ceubh0"]
 
-[ext_resource type="Script" uid="uid://dt4rnw3ckbavm" path="res://Items/health_pack.gd" id="1_57t03"]
+[ext_resource type="Script" path="res://Items/health_pack.gd" id="1_57t03"]
 [ext_resource type="Texture2D" uid="uid://cc3ra0uwqtdvn" path="res://assets/sprites/2D Health & Ammo Pickups v6.2/2D Health & Ammo Pickups v6.2/32px/health-red 32px.png" id="1_vts5c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qlhi6"]
@@ -14,6 +14,7 @@ script = ExtResource("1_57t03")
 texture = ExtResource("1_vts5c")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
