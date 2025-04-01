@@ -1,6 +1,6 @@
-[gd_scene load_steps=163 format=3 uid="uid://dsybfdp5iwrkj"]
+[gd_scene load_steps=164 format=3 uid="uid://dsybfdp5iwrkj"]
 
-[ext_resource type="Script" uid="uid://ele2ii1dry7o" path="res://Characters/Enemie/enemie_with_knife.gd" id="1_g5xd0"]
+[ext_resource type="Script" path="res://Characters/Enemie/enemie_with_knife.gd" id="1_g5xd0"]
 [ext_resource type="Texture2D" uid="uid://c2l67a478immg" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_00.png" id="1_xo8eu"]
 [ext_resource type="Texture2D" uid="uid://d3vqpl4picrde" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_01.png" id="2_k3use"]
 [ext_resource type="Texture2D" uid="uid://dl54ccfe5bx3o" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_02.png" id="3_6vryq"]
@@ -163,7 +163,13 @@ radius = 33.0
 height = 156.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_03pho"]
-radius = 215.0
+radius = 225.056
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nj0gr"]
+radius = 1085.1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pwiyq"]
+radius = 345.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t6t3o"]
 animations = [{
@@ -656,40 +662,46 @@ animations = [{
 "speed": 60.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nj0gr"]
-radius = 1085.1
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_20q08"]
 radius = 65.0
 
 [node name="EnemieWithKnife" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
 collision_layer = 4
-collision_mask = 33
+collision_mask = 49
 script = ExtResource("1_g5xd0")
 
 [node name="HitBox" type="Area2D" parent="."]
 visible = false
 rotation = -1.5708
-scale = Vector2(1, 1)
 collision_layer = 4
 collision_mask = 48
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 9)
 rotation = -0.631088
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_2epr3")
 
 [node name="AttackBox" type="Area2D" parent="."]
-visible = false
-scale = Vector2(1, 1)
 collision_layer = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
-scale = Vector2(1, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox" groups=["Enemies"]]
 shape = SubResource("CircleShape2D_03pho")
 debug_color = Color(0.712014, 0.484886, 0, 0.42)
+
+[node name="DetectionArea" type="Area2D" parent="."]
+visible = false
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_nj0gr")
+debug_color = Color(0.2581, 0.634405, 7.70092e-07, 0.42)
+
+[node name="RangeBox" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeBox"]
+shape = SubResource("CircleShape2D_pwiyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -702,14 +714,10 @@ animation = &"slash"
 autoplay = "run"
 frame = 60
 frame_progress = 1.0
+metadata/_edit_lock_ = true
 
-[node name="DetectionArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-shape = SubResource("CircleShape2D_nj0gr")
-debug_color = Color(0.2581, 0.634405, 7.70092e-07, 0.42)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemies"]]
+visible = false
 shape = SubResource("CircleShape2D_20q08")
 debug_color = Color(0.859766, 0.362549, 3.85046e-07, 0.42)
 

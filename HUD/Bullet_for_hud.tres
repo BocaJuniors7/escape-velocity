@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ibbtavxb3wg7"]
+
+[ext_resource type="Texture2D" uid="uid://cmn83xiu5htl4" path="res://assets/decals/bullet.webp" id="1_3m08b"]
+
+[resource]
+atlas = ExtResource("1_3m08b")
+region = Rect2(0, 0, 32, 16)

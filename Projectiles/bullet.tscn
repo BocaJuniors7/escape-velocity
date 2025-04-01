@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://di7si26hgw67j"]
 
-[ext_resource type="Script" uid="uid://ctlbw8iy30fw3" path="res://Projectiles/bullet.gd" id="1_3si4l"]
+[ext_resource type="Script" path="res://Projectiles/bullet.gd" id="1_3si4l"]
 [ext_resource type="Texture2D" uid="uid://cmn83xiu5htl4" path="res://assets/decals/bullet.webp" id="1_tiduv"]
 [ext_resource type="Texture2D" uid="uid://dd3e8tdx3k7tv" path="res://assets/decals/circle.png" id="3_3x6d5"]
 
@@ -10,7 +10,7 @@ height = 16.0
 
 [node name="Bullet" type="Area2D"]
 collision_layer = 16
-collision_mask = 4
+collision_mask = 54
 script = ExtResource("1_3si4l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -25,3 +25,6 @@ shape = SubResource("CapsuleShape2D_04i05")
 color = Color(1, 1, 0.0431373, 1)
 energy = 1.86
 texture = ExtResource("3_3x6d5")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # Variables
 @export var max_battery = 100.0
-@export var battery_drain_rate = 2.0
+@export var battery_drain_rate = 1.0
 var battery_level = 100.0
 @export var speed = 200.0
 @export var max_health := 100
@@ -31,12 +31,17 @@ var is_reloading = false
 func _ready():
 	hud = get_tree().current_scene.find_child("HUD", true, false)  # ✅ fixed name
 
+
 	if hud:
 		print("✅ HUD FOUND!")
 	else:
 		print("❌ HUD NOT FOUND! Check scene structure.")
 
 	update_hud()
+
+	# ✅ Ensure health HUD is updated at game start
+	if hud and hud.has_method("update_health"):
+		hud.update_health(current_health, max_health)
 
 	if hitbox:
 		hitbox.connect("area_entered", _on_hitbox_area_entered)
@@ -77,21 +82,36 @@ func _physics_process(delta):
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
-		if ammo > 0 and not is_reloading and can_shoot:
-			can_shoot = false  # 🔒 Prevent spamming before animation
+		if is_reloading:
+			return
+
+		if ammo <= 0:
+			await reload()
+			return
+
+		if can_shoot:
+			can_shoot = false
 			ammo -= 1
 			await shoot()
-			await get_tree().create_timer(shoot_cooldown).timeout
-			can_shoot = true
-		elif not is_reloading and can_shoot:
-			can_shoot = false  # 🔒 Still block inputs if reloading is triggered
-			await reload()
-			can_shoot = true
+
+			# ✅ Check if we need to reload right after shooting
+			if ammo <= 0 and not is_reloading:
+				await reload()
+			else:
+				await get_tree().create_timer(shoot_cooldown).timeout
+				can_shoot = true
+
 
 
 # 🔥 Called when hitbox detects a collision
 func _on_hitbox_area_entered(area):
 	print("💥 Player hit by: ", area.name)
+
+	# Ignore AttackBoxes used for enemy detection/damage range
+	if area.name.contains("AttackBox") or area.get_parent().name.contains("Enemy"):
+		print("🛡️ Ignored damage from enemy attack box")
+		return
+
 	take_damage()
 
 # 🔥 Play hit animation
@@ -107,10 +127,15 @@ func take_damage(amount := 10):
 		die()
 
 func shoot() -> void:
-	if not bullet_scene:
+	if bullet_scene == null:
+		print("❌ Bullet scene is null!")
 		return
 
 	var bullet = bullet_scene.instantiate()
+	if not bullet:
+		print("❌ Bullet instantiation failed!")
+		return
+
 	get_parent().add_child(bullet)
 
 	bullet.global_position = gun_point.global_position
@@ -118,11 +143,12 @@ func shoot() -> void:
 	bullet.direction = shoot_direction
 	bullet.rotation = shoot_direction.angle()
 
-	# 🔥 Play hipfire animation, then return to run
 	animated_sprite.play("hipFire")
 	await animated_sprite.animation_finished
+
 	if not is_reloading:
 		animated_sprite.play("run")
+
 
 func reload() -> void:
 	if ammo == max_ammo or is_reloading:
@@ -133,7 +159,9 @@ func reload() -> void:
 	await animated_sprite.animation_finished
 	ammo = max_ammo
 	is_reloading = false
+	can_shoot = true  # ✅ Allow shooting again after reloading
 	animated_sprite.play("run")
+
 
 func add_battery(amount):
 	battery_level = min(battery_level + amount, max_battery)
@@ -149,6 +177,12 @@ func update_hud():
 		hud.update_battery(battery_level, max_battery)
 	else:
 		print("⚠️ HUD found but function update_battery() is missing!")
+
+	# ✅ Add this for health
+	if hud.has_method("update_health"):
+		hud.update_health(current_health, max_health)
+	else:
+		print("⚠️ HUD found but function update_health() is missing!")
 
 func update_light_intensity():
 	if player_light:

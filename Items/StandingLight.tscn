@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt0fqoqidehqr"]
+[gd_scene load_steps=5 format=3 uid="uid://dt0fqoqidehqr"]
 
 [ext_resource type="Texture2D" uid="uid://df71saa58e7a5" path="res://graphics/graphics/floors doors and airlocks/lamp 01.png" id="1_a5ye8"]
-[ext_resource type="Script" uid="uid://rbwru7twx5sw" path="res://Items/standing_light.gd" id="1_ew3cd"]
+[ext_resource type="Script" path="res://Items/standing_light.gd" id="1_ew3cd"]
 [ext_resource type="Texture2D" uid="uid://deb42dyc4iesk" path="res://graphics/graphics/lights/textures/circle.png" id="2_75tuj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nntsj"]
 
 [node name="StandingLight" type="Node2D"]
 script = ExtResource("1_ew3cd")
@@ -13,4 +15,13 @@ texture = ExtResource("1_a5ye8")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.821498, 7.53728e-05, 0.0233359, 1)
 energy = 3.0
+shadow_enabled = true
+shadow_item_cull_mask = 16
 texture = ExtResource("2_75tuj")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 21
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_nntsj")

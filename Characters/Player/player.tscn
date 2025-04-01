@@ -1,6 +1,6 @@
 [gd_scene load_steps=372 format=3 uid="uid://bs6aimxy4riyn"]
 
-[ext_resource type="Script" uid="uid://byp1i5sbdobd3" path="res://Characters/Player/player.gd" id="1_eddf6"]
+[ext_resource type="Script" path="res://Characters/Player/player.gd" id="1_eddf6"]
 [ext_resource type="Texture2D" uid="uid://beva0dhohey0" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/hipFire/Armature_hipFire_00.png" id="2_ulbyn"]
 [ext_resource type="Texture2D" uid="uid://dd3e8tdx3k7tv" path="res://assets/decals/circle.png" id="3_4il67"]
 [ext_resource type="Texture2D" uid="uid://2uedke4j5fng" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/run/Armature_newAnimation_00.png" id="4_km4bj"]
@@ -370,7 +370,7 @@
 [ext_resource type="Texture2D" uid="uid://oe1q2iqwnn6g" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/reload/Armature_reload_250.png" id="317_jt8v7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhdfp"]
-radius = 59.0
+radius = 42.4987
 height = 162.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m1pk1"]
@@ -1513,20 +1513,18 @@ rotation = -1.74533
 texture = ExtResource("2_ulbyn")
 
 [node name="HitBox" type="Area2D" parent="."]
-visible = false
-scale = Vector2(1, 1)
 collision_mask = 24
 
 [node name="HitBox" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-8, -1)
-rotation = -1.74533
-scale = Vector2(1, 1)
+rotation = -2.02805
 shape = SubResource("CapsuleShape2D_bhdfp")
 
 [node name="PlayerLight" type="PointLight2D" parent="."]
 position = Vector2(9.53674e-07, -1.90735e-06)
 color = Color(0.819608, 0, 0.0235294, 1)
 energy = 2.0
+shadow_item_cull_mask = 16
 texture = ExtResource("3_4il67")
 texture_scale = 3.0
 
@@ -1545,10 +1543,8 @@ sprite_frames = SubResource("SpriteFrames_m1pk1")
 animation = &"run"
 autoplay = "run"
 frame_progress = 0.528335
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("CircleShape2D_d7tbn")
 debug_color = Color(0.976029, 0, 0.414963, 0.42)
-metadata/_edit_lock_ = true
