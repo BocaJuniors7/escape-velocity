@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://cmrha3ba04jhp"]
 
-[ext_resource type="Script" uid="uid://bgwhcjsfv2mb5" path="res://scenes/levels/level.gd" id="1_whqty"]
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_whqty"]
 [ext_resource type="Texture2D" uid="uid://btjxnevvj1qpe" path="res://graphics/graphics/floors doors and airlocks/floor06.png" id="2_mbbpy"]
 [ext_resource type="Texture2D" uid="uid://8uvc44hfst2j" path="res://graphics/graphics/walls/wall03.png" id="3_ouxo3"]
 [ext_resource type="Texture2D" uid="uid://5ngpqmb4dov8" path="res://graphics/graphics/floors doors and airlocks/floor05.png" id="4_icy5c"]

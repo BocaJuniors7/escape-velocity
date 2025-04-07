@@ -166,3 +166,7 @@ func add_health(amount: int):
 
 	if hud and hud.has_method("update_health"):
 		hud.update_health(current_health, max_health)
+
+
+func _on_level_2_entrance_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

@@ -1,6 +1,6 @@
 [gd_scene load_steps=372 format=3 uid="uid://bs6aimxy4riyn"]
 
-[ext_resource type="Script" uid="uid://byp1i5sbdobd3" path="res://Characters/Player/player.gd" id="1_eddf6"]
+[ext_resource type="Script" path="res://Characters/Player/player.gd" id="1_eddf6"]
 [ext_resource type="Texture2D" uid="uid://beva0dhohey0" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/hipFire/Armature_hipFire_00.png" id="2_ulbyn"]
 [ext_resource type="Texture2D" uid="uid://dd3e8tdx3k7tv" path="res://assets/decals/circle.png" id="3_4il67"]
 [ext_resource type="Texture2D" uid="uid://2uedke4j5fng" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/run/Armature_newAnimation_00.png" id="4_km4bj"]
@@ -1514,19 +1514,18 @@ texture = ExtResource("2_ulbyn")
 
 [node name="HitBox" type="Area2D" parent="."]
 visible = false
-scale = Vector2(1, 1)
 collision_mask = 24
 
 [node name="HitBox" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-8, -1)
 rotation = -1.74533
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_bhdfp")
 
 [node name="PlayerLight" type="PointLight2D" parent="."]
 position = Vector2(9.53674e-07, -1.90735e-06)
+enabled = false
 color = Color(0.819608, 0, 0.0235294, 1)
-energy = 2.0
+energy = 0.4
 texture = ExtResource("3_4il67")
 texture_scale = 3.0
 
