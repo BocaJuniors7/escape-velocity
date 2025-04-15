@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=4 uid="uid://curu4i6diid1"]
 
-[ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_igcej"]
+[ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_igcej"]
 [ext_resource type="Texture2D" uid="uid://d4jv2ivvtwtxs" path="res://graphics/graphics/decals/blood.png" id="2_avslr"]
 [ext_resource type="Texture2D" uid="uid://bsi5mjj2y5d24" path="res://assets/sprites/ships/ship (9).png" id="3_a2mpc"]
 [ext_resource type="Texture2D" uid="uid://sxp5mf4tl2bo" path="res://graphics/graphics/walls/panel 02.png" id="4_jiqne"]
 [ext_resource type="Texture2D" uid="uid://ci8uf3wyww4s5" path="res://graphics/graphics/walls/panel 01.png" id="5_iacuy"]
-[ext_resource type="Texture2D" uid="uid://fji7dk2ni2ki" path="res://graphics/graphics/floors doors and airlocks/door01-2.png" id="6_m1lte"]
+[ext_resource type="Texture2D" uid="uid://fji7dk2ni2ki" path="res://graphics/floors doors and airlocks/door01-2.png" id="6_m1lte"]
 
 [node name="EmergencyControlCenter" type="Node2D"]
 

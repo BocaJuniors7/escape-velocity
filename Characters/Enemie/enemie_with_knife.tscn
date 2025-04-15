@@ -691,14 +691,12 @@ debug_color = Color(0.712014, 0.484886, 0, 0.42)
 
 [node name="DetectionArea" type="Area2D" parent="."]
 visible = false
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_nj0gr")
 debug_color = Color(0.2581, 0.634405, 7.70092e-07, 0.42)
 
 [node name="RangeBox" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeBox"]
 shape = SubResource("CircleShape2D_pwiyq")

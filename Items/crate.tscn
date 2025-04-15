@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbv4kba1678oc"]
+[gd_scene load_steps=7 format=3 uid="uid://b58711wcffhsb"]
 
-[ext_resource type="Texture2D" uid="uid://dxhfuq67eyowy" path="res://graphics/graphics/floors doors and airlocks/crate 02.png" id="1_60j8n"]
+[ext_resource type="Texture2D" uid="uid://dxhfuq67eyowy" path="res://graphics/floors doors and airlocks/crate 02.png" id="1_60j8n"]
 [ext_resource type="Script" path="res://Items/crate.gd" id="1_t3mew"]
 [ext_resource type="PackedScene" uid="uid://bmmm5ctvt5o8y" path="res://Items/battery_pick_up.tscn" id="2_qi2ph"]
 [ext_resource type="PackedScene" uid="uid://b0wjk660yl5gn" path="res://Items/half_battery_pick_up.tscn" id="3_h0thn"]

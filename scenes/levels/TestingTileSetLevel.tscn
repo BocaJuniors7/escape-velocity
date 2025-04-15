@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnxm357onhumv"]
 
-[ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_cff1s"]
+[ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_cff1s"]
 [ext_resource type="PackedScene" uid="uid://bs6aimxy4riyn" path="res://Characters/Player/player.tscn" id="3_gbdaw"]
 [ext_resource type="PackedScene" uid="uid://dt0fqoqidehqr" path="res://Items/StandingLight.tscn" id="3_vp6pr"]
 

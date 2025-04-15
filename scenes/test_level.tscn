@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://bncnrv0oasy7g"]
 
 [ext_resource type="Texture2D" uid="uid://rba5p7m8h0qa" path="res://assets/decals/BlackBackGround.jpg" id="1_m8wrv"]
-[ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_rkin1"]
+[ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_rkin1"]
 [ext_resource type="PackedScene" uid="uid://bs6aimxy4riyn" path="res://Characters/Player/player.tscn" id="1_w15xr"]
 [ext_resource type="PackedScene" uid="uid://dsybfdp5iwrkj" path="res://Characters/Enemie/enemie_with_knife.tscn" id="2_ukjw0"]
 [ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="3_4tood"]
 [ext_resource type="PackedScene" uid="uid://bmmm5ctvt5o8y" path="res://Items/battery_pick_up.tscn" id="3_b80cd"]
 [ext_resource type="PackedScene" uid="uid://dt0fqoqidehqr" path="res://Items/StandingLight.tscn" id="7_0wbyc"]
 [ext_resource type="PackedScene" uid="uid://tsyo83ceubh0" path="res://Items/health_pack.tscn" id="8_gcsyx"]
-[ext_resource type="PackedScene" uid="uid://dbv4kba1678oc" path="res://Items/crate.tscn" id="9_6x82i"]
+[ext_resource type="PackedScene" uid="uid://b58711wcffhsb" path="res://Items/crate.tscn" id="9_6x82i"]
 
 [node name="Test_Level" type="Node2D"]
 
@@ -32,6 +32,7 @@ layer_2/tile_data = PackedInt32Array(2228283, 4, 3, 2162747, 4, 2, 2097211, 4, 1
 layer_3/name = "Pipes"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map_Decor"]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Items" type="Node" parent="."]
