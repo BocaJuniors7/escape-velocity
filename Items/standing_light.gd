@@ -1,4 +1,4 @@
-extends Node2D  # Or Light2D if it's attached directly
+extends StaticBody2D  
 
 @onready var light: Light2D = $PointLight2D
 @export var strobe_speed := 4.0     # Speed of strobe

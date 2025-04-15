@@ -1523,11 +1523,9 @@ shape = SubResource("CapsuleShape2D_bhdfp")
 
 [node name="PlayerLight" type="PointLight2D" parent="."]
 position = Vector2(9.53674e-07, -1.90735e-06)
-enabled = false
 color = Color(0.819608, 0, 0.0235294, 1)
-energy = 0.4
 texture = ExtResource("3_4il67")
-texture_scale = 3.0
+texture_scale = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)

@@ -37,7 +37,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0x7b"]
@@ -80,7 +80,8 @@ rotation = 3.14159
 scale = Vector2(8.73744, -4.67519)
 sprite_frames = SubResource("SpriteFrames_gaxgm")
 animation = &"new_animation"
-frame_progress = 0.914834
+autoplay = "new_animation"
+frame_progress = 0.72107
 
 [node name="Portal Collision" type="CollisionShape2D" parent="Level2Entrance"]
 position = Vector2(1399.25, 476)

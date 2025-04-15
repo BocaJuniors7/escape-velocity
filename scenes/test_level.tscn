@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bncnrv0oasy7g"]
+[gd_scene load_steps=19 format=3 uid="uid://bncnrv0oasy7g"]
 
 [ext_resource type="Texture2D" uid="uid://rba5p7m8h0qa" path="res://assets/decals/BlackBackGround.jpg" id="1_m8wrv"]
 [ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_rkin1"]
@@ -9,6 +9,42 @@
 [ext_resource type="PackedScene" uid="uid://dt0fqoqidehqr" path="res://Items/StandingLight.tscn" id="7_0wbyc"]
 [ext_resource type="PackedScene" uid="uid://tsyo83ceubh0" path="res://Items/health_pack.tscn" id="8_gcsyx"]
 [ext_resource type="PackedScene" uid="uid://b58711wcffhsb" path="res://Items/crate.tscn" id="9_6x82i"]
+[ext_resource type="Script" path="res://level_2_entrance.gd" id="10_un3pp"]
+[ext_resource type="Texture2D" uid="uid://3aqtbbw2577d" path="res://assets/SpaceHorrorAssets/P0.png" id="11_3wawp"]
+[ext_resource type="Texture2D" uid="uid://bur7tvcrbidoq" path="res://assets/SpaceHorrorAssets/P5.png" id="12_s5dxa"]
+[ext_resource type="Texture2D" uid="uid://dtottq78cliw7" path="res://assets/SpaceHorrorAssets/P4.png" id="13_kxh3c"]
+[ext_resource type="Texture2D" uid="uid://ddnmx6cf4tlkk" path="res://assets/SpaceHorrorAssets/P1.png" id="14_4siqo"]
+[ext_resource type="Texture2D" uid="uid://so5tij5ql3u5" path="res://assets/SpaceHorrorAssets/P2.png" id="15_qe5ov"]
+[ext_resource type="Texture2D" uid="uid://c3qf17maaf3c7" path="res://assets/SpaceHorrorAssets/P3.png" id="16_ymbph"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xk3nu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_3wawp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s5dxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kxh3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4siqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qe5ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ymbph")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rroip"]
+size = Vector2(67, 84)
 
 [node name="Test_Level" type="Node2D"]
 
@@ -32,7 +68,6 @@ layer_2/tile_data = PackedInt32Array(2228283, 4, 3, 2162747, 4, 2, 2097211, 4, 1
 layer_3/name = "Pipes"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map_Decor"]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Items" type="Node" parent="."]
@@ -73,7 +108,7 @@ position = Vector2(381, 393)
 [node name="Enemies" type="Node" parent="Player_Enemies"]
 
 [node name="EnemieWithKnife" parent="Player_Enemies/Enemies" instance=ExtResource("2_ukjw0")]
-position = Vector2(613, 611)
+position = Vector2(617, 613)
 
 [node name="EnemieWithKnife2" parent="Player_Enemies/Enemies" instance=ExtResource("2_ukjw0")]
 position = Vector2(802, 651)
@@ -109,36 +144,58 @@ metadata/_edit_lock_ = true
 position = Vector2(595, 1120)
 metadata/_edit_lock_ = true
 
-[node name="Text" type="Node" parent="."]
+[node name="LevelTransition" type="Node" parent="."]
 
-[node name="TextEdit" type="TextEdit" parent="Text"]
-anchors_preset = -1
-anchor_right = 0.006
-anchor_bottom = 0.034
-offset_left = 220.0
-offset_top = 254.0
-offset_right = 451.32
-offset_bottom = 271.52
-placeholder_text = "Welcome to Escape Velocity"
+[node name="SouthMaintenceTunnleEntrance" type="Area2D" parent="LevelTransition"]
+position = Vector2(-21, 987)
+script = ExtResource("10_un3pp")
+next_scene_path = "res://scenes/levels/maintence_tunnles.tscn"
 
-[node name="TextEdit2" type="TextEdit" parent="Text"]
-anchors_preset = -1
-anchor_right = 0.02
-anchor_bottom = 0.047
-offset_left = -96.0
-offset_top = 252.0
-offset_right = 139.4
-offset_bottom = 262.16
-placeholder_text = "Shoot the crates to get supplies"
+[node name="Portal Animation" type="AnimatedSprite2D" parent="LevelTransition/SouthMaintenceTunnleEntrance"]
+visible = false
+position = Vector2(183, 120)
+rotation = 3.14159
+scale = Vector2(5.06266, -2.3719)
+sprite_frames = SubResource("SpriteFrames_xk3nu")
+animation = &"new_animation"
+autoplay = "new_animation"
 
-[node name="TextEdit3" type="TextEdit" parent="Text"]
-anchors_preset = -1
-anchor_left = -0.026
-anchor_top = 0.011
-anchor_right = -0.026
-anchor_bottom = 0.011
-offset_left = -152.72
-offset_top = 487.08
-offset_right = 120.28
-offset_bottom = 541.08
-placeholder_text = "Kill Enemies and Escape the ship"
+[node name="Portal Collision" type="CollisionShape2D" parent="LevelTransition/SouthMaintenceTunnleEntrance"]
+position = Vector2(184, 119)
+shape = SubResource("RectangleShape2D_rroip")
+
+[node name="BossEntrance" type="Area2D" parent="LevelTransition"]
+position = Vector2(799, 405)
+script = ExtResource("10_un3pp")
+next_scene_path = "res://scenes/levels/boss_fight.tscn"
+
+[node name="Portal Animation" type="AnimatedSprite2D" parent="LevelTransition/BossEntrance"]
+visible = false
+position = Vector2(183, 120)
+rotation = 3.14159
+scale = Vector2(5.06266, -2.3719)
+sprite_frames = SubResource("SpriteFrames_xk3nu")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="Portal Collision" type="CollisionShape2D" parent="LevelTransition/BossEntrance"]
+position = Vector2(182.5, 123)
+shape = SubResource("RectangleShape2D_rroip")
+
+[node name="TutorialLevelPortal" type="Area2D" parent="LevelTransition"]
+position = Vector2(277, 276)
+script = ExtResource("10_un3pp")
+next_scene_path = "res://scenes/levels/tutorial_level.tscn"
+
+[node name="Portal Animation" type="AnimatedSprite2D" parent="LevelTransition/TutorialLevelPortal"]
+position = Vector2(183, 120)
+rotation = 3.14159
+scale = Vector2(5.06266, -2.3719)
+sprite_frames = SubResource("SpriteFrames_xk3nu")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.122195
+
+[node name="Portal Collision" type="CollisionShape2D" parent="LevelTransition/TutorialLevelPortal"]
+position = Vector2(182.5, 123)
+shape = SubResource("RectangleShape2D_rroip")

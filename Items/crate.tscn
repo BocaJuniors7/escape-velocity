@@ -10,6 +10,8 @@
 size = Vector2(33, 40)
 
 [node name="Crate" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 16
 script = ExtResource("1_t3mew")
 item_scenes = Array[PackedScene]([ExtResource("2_qi2ph"), ExtResource("4_2fn1y"), ExtResource("3_h0thn")])
 

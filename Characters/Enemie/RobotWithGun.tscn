@@ -1524,7 +1524,6 @@ collision_mask = 16
 shape = SubResource("CircleShape2D_4gxvd")
 
 [node name="AttackBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
@@ -1534,5 +1533,7 @@ debug_color = Color(0.929731, 0.0926853, 0.611159, 0.42)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_aqng1")
-animation = &"Idle"
+animation = &"Shooting"
 autoplay = "Idle"
+frame = 180
+frame_progress = 1.0

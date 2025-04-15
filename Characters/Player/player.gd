@@ -10,7 +10,7 @@ var current_health = max_health
 
 # HUD Reference
 @onready var hud: CanvasLayer = null
-@onready var player_light: Light2D = $PlayerLight
+@onready var player_light: PointLight2D = $PlayerLight
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox = $HitBox
 

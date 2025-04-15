@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://biwwex44lvipx"]
+
+[ext_resource type="Script" path="res://Items/standing_light_yellow.gd" id="1_t2tte"]
+[ext_resource type="Texture2D" uid="uid://df71saa58e7a5" path="res://graphics/floors doors and airlocks/lamp 01.png" id="1_ypaul"]
+[ext_resource type="Texture2D" uid="uid://dd3e8tdx3k7tv" path="res://assets/decals/circle.png" id="2_vxe3u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dail1"]
+height = 34.0
+
+[node name="StandingLightYellow" type="StaticBody2D"]
+collision_layer = 32
+collision_mask = 5
+script = ExtResource("1_t2tte")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ypaul")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_dail1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.943394, 0.943394, 2.31028e-06, 1)
+energy = 1.5
+shadow_enabled = true
+shadow_item_cull_mask = 16
+texture = ExtResource("2_vxe3u")

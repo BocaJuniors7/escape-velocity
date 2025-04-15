@@ -6,7 +6,9 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nntsj"]
 
-[node name="StandingLight" type="Node2D"]
+[node name="StandingLight" type="StaticBody2D"]
+collision_layer = 32
+collision_mask = 5
 script = ExtResource("1_ew3cd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,14 +16,13 @@ texture = ExtResource("1_a5ye8")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.821498, 7.53728e-05, 0.0233359, 1)
-energy = 3.0
 shadow_enabled = true
 shadow_item_cull_mask = 16
 texture = ExtResource("2_75tuj")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 21
+collision_layer = 32
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_nntsj")

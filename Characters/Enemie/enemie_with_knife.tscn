@@ -690,7 +690,6 @@ shape = SubResource("CircleShape2D_03pho")
 debug_color = Color(0.712014, 0.484886, 0, 0.42)
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_nj0gr")
@@ -715,7 +714,6 @@ frame_progress = 1.0
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemies"]]
-visible = false
 shape = SubResource("CircleShape2D_20q08")
 debug_color = Color(0.859766, 0.362549, 3.85046e-07, 0.42)
 
