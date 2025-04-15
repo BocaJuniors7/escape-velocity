@@ -1,7 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://cmrha3ba04jhp"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_whqty"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://btjxnevvj1qpe" path="res://graphics/floors doors and airlocks/floor06.png" id="2_mbbpy"]
+=======
+[ext_resource type="Texture2D" uid="uid://btjxnevvj1qpe" path="res://graphics/graphics/floors doors and airlocks/floor06.png" id="2_mbbpy"]
+>>>>>>> 49adf850e6be000cdd689800b946fa0296b88bf6
 [ext_resource type="Texture2D" uid="uid://8uvc44hfst2j" path="res://graphics/graphics/walls/wall03.png" id="3_ouxo3"]
 [ext_resource type="Texture2D" uid="uid://5ngpqmb4dov8" path="res://graphics/floors doors and airlocks/floor05.png" id="4_icy5c"]
 [ext_resource type="PackedScene" uid="uid://cldy1u267tnqg" path="res://batteries.tscn" id="4_ouxo3"]

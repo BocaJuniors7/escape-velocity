@@ -1,6 +1,10 @@
 [gd_scene load_steps=3 format=4 uid="uid://d1p54gws4xsvl"]
 
+<<<<<<< HEAD
 [ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_e1mgm"]
+=======
+[ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_e1mgm"]
+>>>>>>> 49adf850e6be000cdd689800b946fa0296b88bf6
 [ext_resource type="Texture2D" uid="uid://ckng38bq8hl1k" path="res://graphics/graphics/objects/ventilation_hole.png" id="2_tt7xl"]
 
 [node name="MaintenanceTunnels" type="Node2D"]
