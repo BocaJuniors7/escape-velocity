@@ -5,7 +5,6 @@ extends CharacterBody2D
 @onready var health_audio: AudioStreamPlayer2D = $HealthAddedAudio
 @onready var battery_audio: AudioStreamPlayer2D = $BatteryAddedAudio
 
-# Variables
 @export var max_battery = 100.0
 @export var battery_drain_rate = 2.5
 var battery_level = 100.0
@@ -13,28 +12,26 @@ var battery_level = 100.0
 @export var max_health := 100
 var current_health = max_health
 
-# HUD Reference
 @onready var hud: CanvasLayer = null
 @onready var player_light: PointLight2D = $PlayerLight
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox = $HitBox
 
-# Shooting variables
 @export var bullet_scene: PackedScene = preload("res://Projectiles/bullet.tscn")
 @export var shoot_cooldown: float = 0.2
 var can_shoot: bool = true
 
-# Gun / Reload variables
 var ammo = 10
 var max_ammo = 10
 var is_reloading = false
 
-# Reference to GunPoint (bullet spawn position)
 @onready var gun_point = $GunPoint
 
 func _ready():
 	current_health = GameState.player_health
 	battery_level = GameState.player_battery
+	ammo = 10  # Ensure it's set properly here
+	max_ammo = 10
 	print("🧐 GameState at start: HP =", current_health, " Battery =", battery_level)
 	hud = get_tree().current_scene.find_child("HUD", true, false)
 
@@ -43,7 +40,6 @@ func _ready():
 	else:
 		print("❌ HUD NOT FOUND! Check scene structure.")
 
-	# ✅ Load saved health and battery if available
 	if Engine.has_singleton("GameState"):
 		var state = Engine.get_singleton("GameState")
 		if state.player_health > 0:
@@ -53,15 +49,10 @@ func _ready():
 		print("🔄 Loaded player state: HP =", current_health, ", Battery =", battery_level)
 
 	update_hud()
-
-	if hud and hud.has_method("update_health"):
-		hud.update_health(current_health, max_health)
+	update_ammo_display()
 
 	if hitbox:
 		hitbox.connect("area_entered", _on_hitbox_area_entered)
-		
-	
-
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -102,6 +93,7 @@ func _input(event):
 		if can_shoot:
 			can_shoot = false
 			ammo -= 1
+			update_ammo_display()
 			await shoot()
 			if ammo <= 0 and not is_reloading:
 				await reload()
@@ -111,7 +103,6 @@ func _input(event):
 
 func shoot() -> void:
 	shooting_audio.play()
-
 	if bullet_scene == null:
 		print("❌ Bullet scene is null!")
 		return
@@ -142,6 +133,7 @@ func reload() -> void:
 	ammo = max_ammo
 	is_reloading = false
 	can_shoot = true
+	update_ammo_display()
 	animated_sprite.play("run")
 
 func _on_hitbox_area_entered(area):
@@ -198,9 +190,13 @@ func update_hud():
 	else:
 		print("⚠️ HUD missing update_health()")
 
+func update_ammo_display():
+	if hud and hud.has_method("update_ammo"):
+		hud.update_ammo(ammo, max_ammo)
+
 func _on_level_2_entrance_body_entered(body: Node2D) -> void:
 	pass
-	
+
 func on_level_completed():
 	GameState.player_health = current_health
 	GameState.player_battery = battery_level

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://w6b54v1bm36u"]
+[gd_scene load_steps=6 format=3 uid="uid://w6b54v1bm36u"]
 
 [ext_resource type="Script" path="res://HUD/canvas_layer.gd" id="1_26g34"]
 [ext_resource type="Texture2D" uid="uid://h2vog01rcc7l" path="res://graphics/graphics/ui/progress_bar/bg.png" id="2_pptb5"]
 [ext_resource type="Texture2D" uid="uid://bn36yerobi0si" path="res://graphics/graphics/ui/progress_bar/over.png" id="3_30dfk"]
 [ext_resource type="Texture2D" uid="uid://6fnqa6mhvu3l" path="res://graphics/graphics/ui/progress_bar/progress.png" id="4_qaw5u"]
+[ext_resource type="Texture2D" uid="uid://dimndcbxtcfoo" path="res://graphics/graphics/ui/bullet.png" id="5_rlx3s"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_26g34")
@@ -72,3 +73,19 @@ grow_vertical = 0
 text = "Health:
 "
 metadata/_edit_use_anchors_ = true
+
+[node name="BulletLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.053125
+anchor_top = 0.716667
+anchor_right = 0.169531
+anchor_bottom = 0.783333
+offset_top = -3.05176e-05
+text = "Ammo 10 / 10"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(31, 527)
+scale = Vector2(0.137755, 0.155612)
+texture = ExtResource("5_rlx3s")
