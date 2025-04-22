@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://hsfy4strucvu"]
+[gd_scene load_steps=17 format=3 uid="uid://hsfy4strucvu"]
 
 [ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_e1m5t"]
 [ext_resource type="Texture2D" uid="uid://rba5p7m8h0qa" path="res://assets/decals/BlackBackGround.jpg" id="1_vocuq"]
@@ -13,35 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsybfdp5iwrkj" path="res://Characters/Enemie/enemie_with_knife.tscn" id="10_412m5"]
 [ext_resource type="PackedScene" uid="uid://b58711wcffhsb" path="res://Items/crate.tscn" id="11_5ewaw"]
 [ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="11_tuw53"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rj310"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_prnfa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_emkdd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_hbsrg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_s4asa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_i6p8g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_a7w4j")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 10.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cenew"]
-size = Vector2(67, 84)
+[ext_resource type="AudioStream" uid="uid://bweqklyfk401w" path="res://audio/AmbientAndAlarm/Space Station Ambience Sound Effect.mp3" id="14_ltt1l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r56av"]
 animations = [{
@@ -94,24 +66,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="LevelTransitions" type="Node" parent="."]
 
-[node name="TestLevel" type="Area2D" parent="LevelTransitions"]
-position = Vector2(-758, 817)
-script = ExtResource("2_b8vd5")
-next_scene_path = "res://scenes/test_level.tscn"
-
-[node name="Portal Animation" type="AnimatedSprite2D" parent="LevelTransitions/TestLevel"]
-visible = false
-position = Vector2(183, 120)
-rotation = 3.14159
-scale = Vector2(5.06266, -2.3719)
-sprite_frames = SubResource("SpriteFrames_rj310")
-animation = &"new_animation"
-autoplay = "new_animation"
-
-[node name="Portal Collision" type="CollisionShape2D" parent="LevelTransitions/TestLevel"]
-position = Vector2(183, 116)
-shape = SubResource("RectangleShape2D_cenew")
-
 [node name="BossEntrance" type="Area2D" parent="LevelTransitions"]
 position = Vector2(-182, -194)
 script = ExtResource("2_b8vd5")
@@ -129,6 +83,26 @@ autoplay = "new_animation"
 [node name="Portal Collision" type="CollisionShape2D" parent="LevelTransitions/BossEntrance"]
 position = Vector2(182.5, 123)
 shape = SubResource("RectangleShape2D_awugy")
+
+[node name="Items" type="Node" parent="."]
+
+[node name="Crate" parent="Items" instance=ExtResource("11_5ewaw")]
+position = Vector2(324, 171)
+
+[node name="Crate2" parent="Items" instance=ExtResource("11_5ewaw")]
+position = Vector2(-203, 340)
+
+[node name="Crate3" parent="Items" instance=ExtResource("11_5ewaw")]
+position = Vector2(328, 491)
+
+[node name="Crate4" parent="Items" instance=ExtResource("11_5ewaw")]
+position = Vector2(905, 851)
+
+[node name="Crate5" parent="Items" instance=ExtResource("11_5ewaw")]
+position = Vector2(722, 216)
+
+[node name="Crate6" parent="Items" instance=ExtResource("11_5ewaw")]
+position = Vector2(305, 1049)
 
 [node name="Characters" type="Node" parent="."]
 
@@ -161,22 +135,8 @@ position = Vector2(817, 1189)
 
 [node name="HUD" parent="Characters" instance=ExtResource("11_tuw53")]
 
-[node name="Items" type="Node" parent="."]
+[node name="Sounds" type="Node" parent="."]
 
-[node name="Crate" parent="Items" instance=ExtResource("11_5ewaw")]
-position = Vector2(324, 171)
-
-[node name="Crate2" parent="Items" instance=ExtResource("11_5ewaw")]
-position = Vector2(-203, 340)
-
-[node name="Crate3" parent="Items" instance=ExtResource("11_5ewaw")]
-position = Vector2(328, 491)
-
-[node name="Crate4" parent="Items" instance=ExtResource("11_5ewaw")]
-position = Vector2(905, 851)
-
-[node name="Crate5" parent="Items" instance=ExtResource("11_5ewaw")]
-position = Vector2(722, 216)
-
-[node name="Crate6" parent="Items" instance=ExtResource("11_5ewaw")]
-position = Vector2(305, 1049)
+[node name="AmbientSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("14_ltt1l")
+autoplay = true

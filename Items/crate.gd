@@ -1,5 +1,5 @@
 extends StaticBody2D
-
+@onready var breaking_audio: AudioStreamPlayer2D = $BreakingAudio
 @export var max_health := 10
 var current_health = max_health
 
@@ -41,6 +41,19 @@ func take_damage(amount: int):
 
 func break_crate():
 	print("💥 Breaking crate... Spawning items:", item_scenes.size())
+
+	# 🎧 Detach the audio before freeing the crate
+	if breaking_audio:
+		var detached_audio = breaking_audio.duplicate()
+		get_tree().current_scene.add_child(detached_audio)
+		detached_audio.global_position = global_position
+		detached_audio.pitch_scale = randf_range(0.95, 1.05)
+		detached_audio.play()
+
+		# 💡 Free the audio after it's done
+		detached_audio.connect("finished", detached_audio.queue_free)
+
+	# 🎁 Spawn items as usual
 	for i in item_scenes.size():
 		if i < spawn_points.size() and item_scenes[i]:
 			var item = item_scenes[i].instantiate()
@@ -49,7 +62,6 @@ func break_crate():
 			var spawn_marker = spawn_points[i]
 			item.global_position = spawn_marker.global_position
 
-			# ✅ Toss slightly downward from spawn point
 			var toss_direction = spawn_marker.transform.y.normalized() * 27
 			var target_pos = item.global_position + toss_direction
 

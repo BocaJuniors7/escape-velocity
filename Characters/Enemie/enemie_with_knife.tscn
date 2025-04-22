@@ -1,4 +1,4 @@
-[gd_scene load_steps=164 format=3 uid="uid://dsybfdp5iwrkj"]
+[gd_scene load_steps=169 format=3 uid="uid://dsybfdp5iwrkj"]
 
 [ext_resource type="Script" path="res://Characters/Enemie/enemie_with_knife.gd" id="1_g5xd0"]
 [ext_resource type="Texture2D" uid="uid://c2l67a478immg" path="res://assets/sprites/Enemies/Characters/enemyClose/hit/armature_hit_00.png" id="1_xo8eu"]
@@ -157,9 +157,14 @@
 [ext_resource type="Texture2D" uid="uid://cpvkqp6eh5ffd" path="res://assets/sprites/Enemies/Characters/enemyClose/thrust/armature_thrust_58.png" id="154_ngyeq"]
 [ext_resource type="Texture2D" uid="uid://cayst6l24xxmf" path="res://assets/sprites/Enemies/Characters/enemyClose/thrust/armature_thrust_59.png" id="155_35dpj"]
 [ext_resource type="Texture2D" uid="uid://cs85qum8mccap" path="res://assets/sprites/Enemies/Characters/enemyClose/thrust/armature_thrust_60.png" id="156_ki8do"]
+[ext_resource type="AudioStream" uid="uid://cbn1rd51jhj6d" path="res://audio/PlayerAndEnemies/wierd growl.mp3" id="158_xyg1y"]
+[ext_resource type="AudioStream" uid="uid://5vmpn3x4ikns" path="res://audio/PlayerAndEnemies/knife swipe.wav" id="159_25onn"]
+[ext_resource type="AudioStream" uid="uid://i5arykbsy664" path="res://audio/PlayerAndEnemies/growl.wav" id="160_fap80"]
+[ext_resource type="AudioStream" uid="uid://dq2edq1wmqmvr" path="res://audio/PlayerAndEnemies/less cool growl.wav" id="161_0grmn"]
+[ext_resource type="Texture2D" uid="uid://b6o21us88b0a1" path="res://graphics/graphics/decals/white.png" id="162_kdird"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2epr3"]
-radius = 33.0
+radius = 42.419
 height = 156.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_03pho"]
@@ -672,17 +677,18 @@ collision_mask = 49
 script = ExtResource("1_g5xd0")
 
 [node name="HitBox" type="Area2D" parent="."]
-visible = false
 rotation = -1.5708
 collision_layer = 4
 collision_mask = 48
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+visible = false
 position = Vector2(0, 9)
 rotation = -0.631088
 shape = SubResource("CapsuleShape2D_2epr3")
 
 [node name="AttackBox" type="Area2D" parent="."]
+visible = false
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox" groups=["Enemies"]]
@@ -690,12 +696,14 @@ shape = SubResource("CircleShape2D_03pho")
 debug_color = Color(0.712014, 0.484886, 0, 0.42)
 
 [node name="DetectionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_nj0gr")
 debug_color = Color(0.2581, 0.634405, 7.70092e-07, 0.42)
 
 [node name="RangeBox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeBox"]
 shape = SubResource("CircleShape2D_pwiyq")
@@ -714,8 +722,30 @@ frame_progress = 1.0
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemies"]]
+visible = false
 shape = SubResource("CircleShape2D_20q08")
 debug_color = Color(0.859766, 0.362549, 3.85046e-07, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="GrowlingAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("158_xyg1y")
+
+[node name="AttackingAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("159_25onn")
+
+[node name="DeathAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("160_fap80")
+volume_db = 24.0
+
+[node name="DamageAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("161_0grmn")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.819608, 0, 0.0235294, 1)
+energy = 0.05
+texture = ExtResource("162_kdird")
+texture_scale = 4.98
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="AttackBox" to="." method="_on_attack_box_body_entered"]
 [connection signal="body_exited" from="AttackBox" to="." method="_on_attack_box_body_exited"]

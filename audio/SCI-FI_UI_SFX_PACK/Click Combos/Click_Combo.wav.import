@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b5ct31hrurahv"
+path="res://.godot/imported/Click_Combo.wav-32671da465d3897a7ccb21abee9d3405.sample"
+
+[deps]
+
+source_file="res://audio/SCI-FI_UI_SFX_PACK/Click Combos/Click_Combo.wav"
+dest_files=["res://.godot/imported/Click_Combo.wav-32671da465d3897a7ccb21abee9d3405.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

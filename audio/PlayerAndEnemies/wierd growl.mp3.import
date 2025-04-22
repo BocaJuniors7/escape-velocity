@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbn1rd51jhj6d"
+path="res://.godot/imported/wierd growl.mp3-4204dd9dffd5fe446e4095c739998359.mp3str"
+
+[deps]
+
+source_file="res://audio/PlayerAndEnemies/wierd growl.mp3"
+dest_files=["res://.godot/imported/wierd growl.mp3-4204dd9dffd5fe446e4095c739998359.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,13 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://quu1ym4l8lib"]
+[gd_scene load_steps=22 format=3 uid="uid://quu1ym4l8lib"]
 
 [ext_resource type="Texture2D" uid="uid://rba5p7m8h0qa" path="res://assets/decals/BlackBackGround.jpg" id="1_11xpj"]
+[ext_resource type="Script" path="res://scenes/levels/boss_fight.gd" id="1_ghm2n"]
 [ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_ln2k2"]
 [ext_resource type="PackedScene" uid="uid://bs6aimxy4riyn" path="res://Characters/Player/player.tscn" id="2_kqp1f"]
 [ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="3_1v5iw"]
 [ext_resource type="PackedScene" uid="uid://dsybfdp5iwrkj" path="res://Characters/Enemie/enemie_with_knife.tscn" id="5_fs0sh"]
 [ext_resource type="PackedScene" uid="uid://b58711wcffhsb" path="res://Items/crate.tscn" id="6_bxq0c"]
-[ext_resource type="Script" path="res://level_2_entrance.gd" id="7_45vlp"]
 [ext_resource type="Texture2D" uid="uid://3aqtbbw2577d" path="res://assets/SpaceHorrorAssets/P0.png" id="8_hssxf"]
+[ext_resource type="Script" path="res://scenes/levels/exit.gd" id="8_ovjkt"]
 [ext_resource type="Texture2D" uid="uid://bur7tvcrbidoq" path="res://assets/SpaceHorrorAssets/P5.png" id="9_c6p4k"]
 [ext_resource type="Texture2D" uid="uid://dtottq78cliw7" path="res://assets/SpaceHorrorAssets/P4.png" id="10_kuoqs"]
 [ext_resource type="Texture2D" uid="uid://ddnmx6cf4tlkk" path="res://assets/SpaceHorrorAssets/P1.png" id="11_727cx"]
@@ -15,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://c3qf17maaf3c7" path="res://assets/SpaceHorrorAssets/P3.png" id="13_bf01s"]
 [ext_resource type="PackedScene" uid="uid://biwwex44lvipx" path="res://Items/standing_light_yellow.tscn" id="15_ouusu"]
 [ext_resource type="PackedScene" uid="uid://dt0fqoqidehqr" path="res://Items/StandingLight.tscn" id="16_nr7v3"]
+[ext_resource type="AudioStream" uid="uid://dcrfiun1qu0nu" path="res://audio/AmbientAndAlarm/Portal 2 - Sound Effect - Portal Humming Loop.mp3" id="17_jwjlk"]
+[ext_resource type="AudioStream" uid="uid://ldqptgtqqu6u" path="res://audio/Sinister Royalty Free Music Bundle/Sinister Royalty Free Music Bundle/Sinsiter_4.wav" id="18_rmtek"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5dx5v"]
 animations = [{
@@ -45,7 +48,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2uem2"]
 size = Vector2(67, 84)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fep00"]
+size = Vector2(64, 20)
+
 [node name="BossFight" type="Node2D"]
+script = ExtResource("1_ghm2n")
 
 [node name="MapBuilding" type="Node" parent="."]
 
@@ -76,19 +83,19 @@ position = Vector2(6, 174)
 
 [node name="enemies" type="Node" parent="Characters"]
 
-[node name="EnemieWithKnife" parent="Characters/enemies" instance=ExtResource("5_fs0sh")]
+[node name="EnemieWithKnife" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
 position = Vector2(-132, -443)
 
-[node name="EnemieWithKnife2" parent="Characters/enemies" instance=ExtResource("5_fs0sh")]
+[node name="EnemieWithKnife2" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
 position = Vector2(101, -422)
 
-[node name="EnemieWithKnife3" parent="Characters/enemies" instance=ExtResource("5_fs0sh")]
+[node name="EnemieWithKnife3" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
 position = Vector2(-108, -568)
 
-[node name="EnemieWithKnife4" parent="Characters/enemies" instance=ExtResource("5_fs0sh")]
+[node name="EnemieWithKnife4" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
 position = Vector2(132, -571)
 
-[node name="EnemieWithKnife5" parent="Characters/enemies" instance=ExtResource("5_fs0sh")]
+[node name="EnemieWithKnife5" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
 position = Vector2(10, -506)
 
 [node name="Items" type="Node" parent="."]
@@ -109,7 +116,7 @@ position = Vector2(190, -13)
 
 [node name="Exit" type="Area2D" parent="LevelTransition"]
 position = Vector2(-185, -824)
-script = ExtResource("7_45vlp")
+script = ExtResource("8_ovjkt")
 next_scene_path = "res://scenes/levels/tutorial_level.tscn"
 
 [node name="Portal Animation" type="AnimatedSprite2D" parent="LevelTransition/Exit"]
@@ -132,3 +139,21 @@ metadata/_edit_lock_ = true
 
 [node name="StandingLight" parent="Lights" instance=ExtResource("16_nr7v3")]
 position = Vector2(2, -581)
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource("17_jwjlk")
+
+[node name="BossMusic" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource("18_rmtek")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="BossMusicActivator" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -275)
+shape = SubResource("RectangleShape2D_fep00")
+
+[connection signal="body_entered" from="LevelTransition/Exit" to="." method="_on_exit_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcrfiun1qu0nu"
+path="res://.godot/imported/Portal 2 - Sound Effect - Portal Humming Loop.mp3-7aba4c2c8253dcf7ddbd684782c10900.mp3str"
+
+[deps]
+
+source_file="res://audio/AmbientAndAlarm/Portal 2 - Sound Effect - Portal Humming Loop.mp3"
+dest_files=["res://.godot/imported/Portal 2 - Sound Effect - Portal Humming Loop.mp3-7aba4c2c8253dcf7ddbd684782c10900.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

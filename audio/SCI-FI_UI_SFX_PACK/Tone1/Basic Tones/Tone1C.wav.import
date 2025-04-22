@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhs5j5vbnko3a"
+path="res://.godot/imported/Tone1C.wav-31cdd2096e721a36869c29f24c3dbc7b.sample"
+
+[deps]
+
+source_file="res://audio/SCI-FI_UI_SFX_PACK/Tone1/Basic Tones/Tone1C.wav"
+dest_files=["res://.godot/imported/Tone1C.wav-31cdd2096e721a36869c29f24c3dbc7b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

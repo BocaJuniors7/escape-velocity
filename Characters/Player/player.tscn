@@ -1,4 +1,4 @@
-[gd_scene load_steps=372 format=3 uid="uid://bs6aimxy4riyn"]
+[gd_scene load_steps=376 format=3 uid="uid://bs6aimxy4riyn"]
 
 [ext_resource type="Script" path="res://Characters/Player/player.gd" id="1_eddf6"]
 [ext_resource type="Texture2D" uid="uid://beva0dhohey0" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/hipFire/Armature_hipFire_00.png" id="2_ulbyn"]
@@ -368,6 +368,10 @@
 [ext_resource type="Texture2D" uid="uid://j5fmlfy8tw6v" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/reload/Armature_reload_248.png" id="315_fbm2u"]
 [ext_resource type="Texture2D" uid="uid://c2hcrshnlryto" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/reload/Armature_reload_249.png" id="316_ld33q"]
 [ext_resource type="Texture2D" uid="uid://oe1q2iqwnn6g" path="res://assets/sprites/Enemies/Characters/PlayerWithGun/reload/Armature_reload_250.png" id="317_jt8v7"]
+[ext_resource type="AudioStream" uid="uid://cms6wyft84k1p" path="res://audio/PlayerAndEnemies/blaster.wav" id="369_em1fy"]
+[ext_resource type="AudioStream" uid="uid://bpvsd2il8ljvo" path="res://audio/PlayerAndEnemies/reload sound .wav" id="370_l6227"]
+[ext_resource type="AudioStream" uid="uid://dfmmewjc1uheo" path="res://audio/SCI-FI_UI_SFX_PACK/Glitches/Glitch_4.wav" id="371_f8s3j"]
+[ext_resource type="AudioStream" uid="uid://cgqls8bkgyr8b" path="res://audio/SCI-FI_UI_SFX_PACK/Glitches/Glitch_5.wav" id="372_rn40y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhdfp"]
 radius = 42.4987
@@ -1547,3 +1551,15 @@ frame_progress = 0.528335
 visible = false
 shape = SubResource("CircleShape2D_d7tbn")
 debug_color = Color(0.976029, 0, 0.414963, 0.42)
+
+[node name="ShootingAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("369_em1fy")
+
+[node name="ReloadingAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("370_l6227")
+
+[node name="HealthAddedAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("371_f8s3j")
+
+[node name="BatteryAddedAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("372_rn40y")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://exby4ij6nch2"
+path="res://.godot/imported/Sinister_5.ogg-0c5b5b4d46ebf1eba0bb58cc078efe5d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Sinister Royalty Free Music Bundle/Sinister Royalty Free Music Bundle/Sinister_5.ogg"
+dest_files=["res://.godot/imported/Sinister_5.ogg-0c5b5b4d46ebf1eba0bb58cc078efe5d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

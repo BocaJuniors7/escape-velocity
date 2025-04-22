@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5vmpn3x4ikns"
+path="res://.godot/imported/knife swipe.wav-3e2e511d4b136e76d7e92211d03defa5.sample"
+
+[deps]
+
+source_file="res://audio/PlayerAndEnemies/knife swipe.wav"
+dest_files=["res://.godot/imported/knife swipe.wav-3e2e511d4b136e76d7e92211d03defa5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

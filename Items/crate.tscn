@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b58711wcffhsb"]
+[gd_scene load_steps=8 format=3 uid="uid://b58711wcffhsb"]
 
 [ext_resource type="Texture2D" uid="uid://dxhfuq67eyowy" path="res://graphics/floors doors and airlocks/crate 02.png" id="1_60j8n"]
 [ext_resource type="Script" path="res://Items/crate.gd" id="1_t3mew"]
 [ext_resource type="PackedScene" uid="uid://bmmm5ctvt5o8y" path="res://Items/battery_pick_up.tscn" id="2_qi2ph"]
 [ext_resource type="PackedScene" uid="uid://b0wjk660yl5gn" path="res://Items/half_battery_pick_up.tscn" id="3_h0thn"]
 [ext_resource type="PackedScene" uid="uid://tsyo83ceubh0" path="res://Items/health_pack.tscn" id="4_2fn1y"]
+[ext_resource type="AudioStream" uid="uid://cjathfencohsk" path="res://audio/SCI-FI_UI_SFX_PACK/Glitches/Glitch_27.wav" id="6_p3ck1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ko11i"]
 size = Vector2(33, 40)
@@ -38,5 +39,9 @@ rotation = 0.260959
 
 [node name="SpawnPoint3" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(0, 12)
+
+[node name="BreakingAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_p3ck1")
+volume_db = 24.0
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

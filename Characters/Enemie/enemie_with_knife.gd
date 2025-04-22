@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+@onready var damage_audio: AudioStreamPlayer2D = $DamageAudio
+@onready var death_audio: AudioStreamPlayer2D = $DeathAudio
+@onready var growling_audio: AudioStreamPlayer2D = $GrowlingAudio
+@onready var attacking_audio: AudioStreamPlayer2D = $AttackingAudio
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_box: Area2D = $AttackBox
 @onready var hitbox: Area2D = $HitBox
@@ -59,12 +64,15 @@ func attack():
 	use_slash_next = !use_slash_next
 
 	print("🎬 Playing attack animation:", animation_name)
-	animated_sprite.play(animation_name)
 
+	# Play attacking audio at start of animation
+	attacking_audio.pitch_scale = randf_range(0.95, 1.05)
+	attacking_audio.play()
+
+	animated_sprite.play(animation_name)
 	await animated_sprite.animation_finished
 	print("✅ Finished", animation_name, "animation.")
 
-	# 🔥 Check if player is still in RANGE after attack anim
 	if player and $RangeBox.overlaps_body(player):
 		print("💥 Enemy deals damage to player!")
 		if player.has_method("take_damage"):
@@ -79,6 +87,11 @@ func attack():
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
+	# 🔁 Immediately re-attack if still in range
+	if player and attack_box.overlaps_body(player):
+		attack()
+
+
 func _on_hitbox_area_entered(area):
 	print("💥 Player hit by:", area.name)
 
@@ -88,9 +101,11 @@ func _on_hitbox_area_entered(area):
 
 	take_damage(10)
 
-
-
 func take_damage(amount: int):
+	if not damage_audio.playing:
+		damage_audio.pitch_scale = randf_range(0.95, 1.05)
+		damage_audio.play()
+
 	current_health -= amount
 	print("💢 Enemy took", amount, "damage! HP =", current_health)
 
@@ -101,9 +116,12 @@ func take_damage(amount: int):
 
 func die():
 	print("💀 Enemy died!")
+	if not death_audio.playing:
+		death_audio.pitch_scale = randf_range(8.95, 9.05)
+		death_audio.play()
+	await death_audio.finished
 	queue_free()
 
-# ✅ Removed damage logic and player setting from attack box signals
 func _on_attack_box_body_entered(_body: Node2D) -> void:
 	print("📥 Player entered AttackBox (debug log)")
 
@@ -112,6 +130,10 @@ func _on_attack_box_body_exited(_body: Node2D) -> void:
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		if not growling_audio.playing:
+			growling_audio.pitch_scale = randf_range(0.95, 1.05)
+			growling_audio.play()
+
 		print("👁️ Player entered vision range")
 		player = body
 
