@@ -1,10 +1,10 @@
 extends CanvasLayer
 
-@onready var battery_bar: TextureProgressBar = $Control/BatteryBar
-@onready var battery_label: Label = $Control/BatteryLabel
-@onready var health_bar: TextureProgressBar = $Control/HealthBar
-@onready var health_label: Label = $Control/HealthLabel
-@onready var bullet_label: Label = $Control/BulletLabel  # Confirm path is correct
+@onready var battery_bar: TextureProgressBar = $Control/Battery/BatteryBar
+@onready var battery_label: Label = $Control/Battery/BatteryLabel
+@onready var health_bar: TextureProgressBar = $Control/Health/HealthBar
+@onready var health_label: Label = $Control/Health/HealthLabel
+@onready var bullet_label: Label = $Control/Ammo/BulletLabel  # Confirm path is correct
 
 func _ready():
 	if bullet_label:

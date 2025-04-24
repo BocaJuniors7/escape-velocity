@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://4oub11tmlgwc"
+path="res://.godot/imported/05.From_The_Ashes.ogg-9e645a0d4a538f6490fbb14dfc50008c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Dark Ambient Soundscape/OGG/05.From_The_Ashes.ogg"
+dest_files=["res://.godot/imported/05.From_The_Ashes.ogg-9e645a0d4a538f6490fbb14dfc50008c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

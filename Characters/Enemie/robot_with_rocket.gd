@@ -3,6 +3,7 @@ extends Node2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_box: Area2D = $AttackBox
 @onready var hitbox: Area2D = $HitBox
+@onready var rocket_spawn: Marker2D = $RocketSpawn # Add a Marker2D node as spawn point
 
 @export var projectile_scene: PackedScene  # Assign rocket.tscn in the editor
 @export var aim_duration := 1.5
@@ -40,32 +41,24 @@ func start_attack():
 	is_attacking = true
 	can_attack = false
 
-	# 🔄 Face the player before aiming
 	if player:
 		look_at(player.global_position)
+		animated_sprite.play("Aiming")
+		await get_tree().create_timer(aim_duration).timeout
 
-	animated_sprite.play("Aiming")
-	await get_tree().create_timer(aim_duration).timeout
+	if player:
+		look_at(player.global_position)
+		animated_sprite.play("Shooting")
+		await animated_sprite.animation_finished
 
-	# 🔄 Re-check and face again before firing
-	if not player:
+		if projectile_scene and rocket_spawn:
+			var projectile = projectile_scene.instantiate()
+			projectile.global_position = rocket_spawn.global_position
+			projectile.direction = (player.global_position - rocket_spawn.global_position).normalized()
+			get_tree().current_scene.add_child(projectile)
+	else:
 		animated_sprite.play("Idle")
-		is_attacking = false
-		can_attack = true
-		return
 
-	look_at(player.global_position)
-	animated_sprite.play("Shooting")
-	await animated_sprite.animation_finished
-
-	if projectile_scene:
-		var projectile = projectile_scene.instantiate()
-		projectile.global_position = global_position
-		projectile.direction = (player.global_position - global_position).normalized()
-		get_tree().current_scene.add_child(projectile)
-
-	animated_sprite.play("Aiming" if player else "Idle")
 	is_attacking = false
-
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true

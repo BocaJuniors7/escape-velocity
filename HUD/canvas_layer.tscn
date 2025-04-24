@@ -4,26 +4,29 @@
 [ext_resource type="Texture2D" uid="uid://h2vog01rcc7l" path="res://graphics/graphics/ui/progress_bar/bg.png" id="2_pptb5"]
 [ext_resource type="Texture2D" uid="uid://bn36yerobi0si" path="res://graphics/graphics/ui/progress_bar/over.png" id="3_30dfk"]
 [ext_resource type="Texture2D" uid="uid://6fnqa6mhvu3l" path="res://graphics/graphics/ui/progress_bar/progress.png" id="4_qaw5u"]
-[ext_resource type="Texture2D" uid="uid://dimndcbxtcfoo" path="res://graphics/graphics/ui/bullet.png" id="5_rlx3s"]
+[ext_resource type="Texture2D" uid="uid://2sin0vuxnltt" path="res://graphics/graphics/ui/bulletResizedAgain.png" id="5_vodn2"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_26g34")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_top = -5.0
+offset_right = 1280.0
+offset_bottom = 715.0
 metadata/_edit_use_anchors_ = true
 
-[node name="BatteryBar" type="TextureProgressBar" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.861111
-anchor_right = 0.234375
-anchor_bottom = 0.902778
+[node name="Battery" type="Node" parent="Control"]
+
+[node name="BatteryBar" type="TextureProgressBar" parent="Control/Battery"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -111.0
+offset_right = 302.0
+offset_bottom = -81.0
 grow_vertical = 0
 value = 100.0
 texture_under = ExtResource("2_pptb5")
@@ -31,27 +34,29 @@ texture_over = ExtResource("3_30dfk")
 texture_progress = ExtResource("4_qaw5u")
 tint_over = Color(0, 0, 0, 1)
 tint_progress = Color(1, 1, 0, 1)
-metadata/_edit_use_anchors_ = true
 
-[node name="BatteryLabel" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0640625
-anchor_top = 0.865278
-anchor_right = 0.203907
-anchor_bottom = 0.897222
-grow_horizontal = 2
+[node name="BatteryLabel" type="Label" parent="Control/Battery"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -106.0
+offset_right = 142.0
+offset_bottom = -83.0
 grow_vertical = 0
 text = "Battery:
 "
-metadata/_edit_use_anchors_ = true
 
-[node name="HealthBar" type="TextureProgressBar" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.788889
-anchor_right = 0.234375
-anchor_bottom = 0.830556
+[node name="Health" type="Node" parent="Control"]
+
+[node name="HealthBar" type="TextureProgressBar" parent="Control/Health"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -147.0
+offset_right = 302.0
+offset_bottom = -117.0
 grow_vertical = 0
 value = 100.0
 texture_under = ExtResource("2_pptb5")
@@ -59,33 +64,40 @@ texture_over = ExtResource("3_30dfk")
 texture_progress = ExtResource("4_qaw5u")
 tint_over = Color(0, 0, 0, 1)
 tint_progress = Color(0.4, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
 
-[node name="HealthLabel" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0664063
-anchor_top = 0.794444
-anchor_right = 0.20625
-anchor_bottom = 0.826389
-grow_horizontal = 2
+[node name="HealthLabel" type="Label" parent="Control/Health"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = -144.0
+offset_right = 139.0
+offset_bottom = -121.0
 grow_vertical = 0
 text = "Health:
 "
-metadata/_edit_use_anchors_ = true
 
-[node name="BulletLabel" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.053125
-anchor_top = 0.716667
-anchor_right = 0.169531
-anchor_bottom = 0.783333
-offset_top = -3.05176e-05
+[node name="Ammo" type="Node" parent="Control"]
+
+[node name="BulletLabel" type="Label" parent="Control/Ammo"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = -201.0
+offset_right = 225.0
+offset_bottom = -153.0
+grow_vertical = 0
 text = "Ammo 10 / 10"
-metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
-position = Vector2(31, 527)
-scale = Vector2(0.137755, 0.155612)
-texture = ExtResource("5_rlx3s")
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control/Ammo"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -213.0
+offset_right = 61.0
+offset_bottom = -166.0
+grow_vertical = 0
+value = 100.0
+texture_progress = ExtResource("5_vodn2")

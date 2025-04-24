@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var reloading_audio: AudioStreamPlayer2D = $ReloadingAudio
 @onready var health_audio: AudioStreamPlayer2D = $HealthAddedAudio
 @onready var battery_audio: AudioStreamPlayer2D = $BatteryAddedAudio
+@onready var Damage_taken_audio: AudioStreamPlayer2D = $DamageAudio
 
 @export var max_battery = 100.0
 @export var battery_drain_rate = 2.5
@@ -103,6 +104,8 @@ func _input(event):
 
 func shoot() -> void:
 	shooting_audio.play()
+	GameState.total_bullets_fired += 1  # 🔥 Track each shot fired
+
 	if bullet_scene == null:
 		print("❌ Bullet scene is null!")
 		return
@@ -145,7 +148,10 @@ func _on_hitbox_area_entered(area):
 
 func take_damage(amount := 10):
 	current_health -= amount
+	GameState.total_health_lost += amount
+
 	print("🔥 Player took damage! HP =", current_health)
+	Damage_taken_audio.play()
 	animated_sprite.play("hit")
 	if hud and hud.has_method("update_health"):
 		hud.update_health(current_health, max_health)
@@ -162,10 +168,17 @@ func add_health(amount: int):
 
 func die():
 	print("☠️ Player died!")
-	queue_free()
+	GameState.total_deaths += 1
+	GameState.last_level_scene = get_tree().current_scene.scene_file_path
+
+	# Show death screen
+	get_tree().change_scene_to_file("res://scenes/end_credit_scene.tscn")
+
 
 func add_battery(amount):
+	var before = battery_level
 	battery_level = min(battery_level + amount, max_battery)
+	GameState.total_energy_consumed += before - battery_level
 	if battery_audio:
 		battery_audio.play()
 	update_light_intensity()

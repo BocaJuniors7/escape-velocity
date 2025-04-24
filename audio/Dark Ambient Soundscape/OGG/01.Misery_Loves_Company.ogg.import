@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dttwccyw4tlra"
+path="res://.godot/imported/01.Misery_Loves_Company.ogg-7afdbfcf9a668076237a542042680955.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Dark Ambient Soundscape/OGG/01.Misery_Loves_Company.ogg"
+dest_files=["res://.godot/imported/01.Misery_Loves_Company.ogg-7afdbfcf9a668076237a542042680955.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

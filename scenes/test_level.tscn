@@ -155,9 +155,6 @@ position = Vector2(265, 1008)
 [node name="StandingLight8" parent="Lights" instance=ExtResource("7_0wbyc")]
 position = Vector2(882, 682)
 
-[node name="StandingLight9" parent="Lights" instance=ExtResource("7_0wbyc")]
-position = Vector2(-275, 1006)
-
 [node name="LevelTransition" type="Node" parent="."]
 
 [node name="SouthMaintenceTunnleEntrance" type="Area2D" parent="LevelTransition"]

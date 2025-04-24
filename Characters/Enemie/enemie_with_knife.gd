@@ -79,7 +79,11 @@ func attack():
 			player.take_damage(10)
 	else:
 		print("🛡️ Player dodged the attack")
-
+	
+	if not is_inside_tree() or is_queued_for_deletion():
+		return  # Prevent further actions if scene is about to change
+	
+	
 	if player:
 		animated_sprite.play("run")
 
@@ -116,11 +120,34 @@ func take_damage(amount: int):
 
 func die():
 	print("💀 Enemy died!")
-	if not death_audio.playing:
-		death_audio.pitch_scale = randf_range(8.95, 9.05)
-		death_audio.play()
-	await death_audio.finished
+
+	# Disable colliders and visibility
+	if $CollisionShape2D:
+		$CollisionShape2D.disabled = true
+	if $HitBox:
+		$HitBox.monitoring = false
+		$HitBox.set_deferred("monitorable", false)
+	if $AttackBox:
+		$AttackBox.monitoring = false
+		$AttackBox.set_deferred("monitorable", false)
+	visible = false  # Hide the enemy sprite
+
+	# Detach death audio from enemy node and let it play
+	var death_audio_copy = death_audio.duplicate()
+	get_parent().add_child(death_audio_copy)
+	death_audio_copy.global_position = global_position
+	death_audio_copy.pitch_scale = randf_range(2.95, 3.05)
+	death_audio_copy.play()
+
+	# Free the enemy node immediately, audio will still play
 	queue_free()
+
+	# Correct Godot 4 syntax for connecting signal
+	death_audio_copy.finished.connect(death_audio_copy.queue_free)
+
+
+
+
 
 func _on_attack_box_body_entered(_body: Node2D) -> void:
 	print("📥 Player entered AttackBox (debug log)")

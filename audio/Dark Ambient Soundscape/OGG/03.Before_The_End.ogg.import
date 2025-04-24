@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckl1qusqsqjjg"
+path="res://.godot/imported/03.Before_The_End.ogg-183b114e14d2dc4c2b59c85e576960ad.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Dark Ambient Soundscape/OGG/03.Before_The_End.ogg"
+dest_files=["res://.godot/imported/03.Before_The_End.ogg-183b114e14d2dc4c2b59c85e576960ad.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

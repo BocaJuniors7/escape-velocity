@@ -1,7 +1,7 @@
 [gd_scene load_steps=374 format=3 uid="uid://hxbgw1mun0yd"]
 
 [ext_resource type="Texture2D" uid="uid://cssjb1m8javmc" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/idle60/Armature_idle_00.png" id="1_cfc5d"]
-[ext_resource type="Script" uid="uid://b3psd6rjodbf1" path="res://Characters/Enemie/robot_with_rocket.gd" id="1_syrfv"]
+[ext_resource type="Script" path="res://Characters/Enemie/robot_with_rocket.gd" id="1_syrfv"]
 [ext_resource type="PackedScene" uid="uid://dqgfgifsn55j8" path="res://Projectiles/rocket.tscn" id="2_invwa"]
 [ext_resource type="Texture2D" uid="uid://dy62k8ifhaiju" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_00.png" id="2_l6f5c"]
 [ext_resource type="Texture2D" uid="uid://cxb3sglw5ifj2" path="res://assets/sprites/Enemies/Characters/LightArtilleryRobot/takeAimRocket64/Armature_takeAimRockets_01.png" id="3_7qh0y"]
@@ -1512,26 +1512,20 @@ script = ExtResource("1_syrfv")
 projectile_scene = ExtResource("2_invwa")
 
 [node name="HitBox" type="Area2D" parent="."]
-visible = false
 rotation = 1.5708
-scale = Vector2(1, 1)
 collision_layer = 4
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 rotation = 1.5708
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_4gxvd")
 
 [node name="AttackBox" type="Area2D" parent="."]
-visible = false
 rotation = 1.5708
-scale = Vector2(1, 1)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
 rotation = 1.5708
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_lo8pa")
 debug_color = Color(0.961248, 0, 0.511433, 0.42)
 
@@ -1543,6 +1537,10 @@ texture = ExtResource("1_cfc5d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_4r2ut")
-animation = &"Idle"
+animation = &"Aiming"
 autoplay = "Idle"
-frame_progress = 0.368605
+frame = 64
+frame_progress = 1.0
+
+[node name="RocketSpawn" type="Marker2D" parent="."]
+position = Vector2(140, -5)

@@ -159,8 +159,8 @@
 [ext_resource type="Texture2D" uid="uid://cs85qum8mccap" path="res://assets/sprites/Enemies/Characters/enemyClose/thrust/armature_thrust_60.png" id="156_ki8do"]
 [ext_resource type="AudioStream" uid="uid://cbn1rd51jhj6d" path="res://audio/PlayerAndEnemies/wierd growl.mp3" id="158_xyg1y"]
 [ext_resource type="AudioStream" uid="uid://5vmpn3x4ikns" path="res://audio/PlayerAndEnemies/knife swipe.wav" id="159_25onn"]
-[ext_resource type="AudioStream" uid="uid://i5arykbsy664" path="res://audio/PlayerAndEnemies/growl.wav" id="160_fap80"]
-[ext_resource type="AudioStream" uid="uid://dq2edq1wmqmvr" path="res://audio/PlayerAndEnemies/less cool growl.wav" id="161_0grmn"]
+[ext_resource type="AudioStream" uid="uid://dpom8narnevm1" path="res://audio/robotdeath.mp3" id="160_3ktiu"]
+[ext_resource type="AudioStream" uid="uid://bqug1foslbwt7" path="res://audio/body_hit_finisher_23.wav" id="161_ujhyl"]
 [ext_resource type="Texture2D" uid="uid://b6o21us88b0a1" path="res://graphics/graphics/decals/white.png" id="162_kdird"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2epr3"]
@@ -171,7 +171,7 @@ height = 156.0
 radius = 225.056
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nj0gr"]
-radius = 1085.1
+radius = 1450.08
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pwiyq"]
 radius = 345.0
@@ -696,9 +696,9 @@ shape = SubResource("CircleShape2D_03pho")
 debug_color = Color(0.712014, 0.484886, 0, 0.42)
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+visible = false
 shape = SubResource("CircleShape2D_nj0gr")
 debug_color = Color(0.2581, 0.634405, 7.70092e-07, 0.42)
 
@@ -734,14 +734,15 @@ stream = ExtResource("158_xyg1y")
 stream = ExtResource("159_25onn")
 
 [node name="DeathAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("160_fap80")
-volume_db = 24.0
+stream = ExtResource("160_3ktiu")
 
 [node name="DamageAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("161_0grmn")
+stream = ExtResource("161_ujhyl")
+volume_db = 10.125
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-color = Color(0.819608, 0, 0.0235294, 1)
+visible = false
+color = Color(0.603922, 0.509804, 0.239216, 1)
 energy = 0.05
 texture = ExtResource("162_kdird")
 texture_scale = 4.98

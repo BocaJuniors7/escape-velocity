@@ -117,38 +117,33 @@ position = Vector2(-44, -210)
 [node name="Text" type="Node" parent="."]
 
 [node name="TextEdit" type="TextEdit" parent="Text"]
-anchors_preset = -1
-anchor_left = -0.228
-anchor_top = -0.354
-anchor_right = -0.228
-anchor_bottom = -0.354
-offset_left = 266.84
-offset_top = -355.12
-offset_right = 516.84
-offset_bottom = -268.12
+offset_left = -25.0
+offset_top = -610.0
+offset_right = 225.0
+offset_bottom = -523.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Hi Welcome to Escape Velocity!
 
 To Move use WASD
 "
 
 [node name="TextEdit2" type="TextEdit" parent="Text"]
-anchors_preset = -1
-anchor_right = 0.049
-offset_left = -221.0
-offset_top = -193.0
-offset_right = -66.72
-offset_bottom = -100.0
-text = "Here are Items that will 
-Help you Succeed in 
-the Game"
+offset_left = -91.0
+offset_top = -282.0
+offset_right = 236.0
+offset_bottom = -228.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Here are Items that will Help you 
+Succeed in the Game"
 
 [node name="TextEdit3" type="TextEdit" parent="Text"]
-anchors_preset = -1
-anchor_right = 0.04
-offset_left = 12.0
-offset_top = -189.0
-offset_right = 162.8
-offset_bottom = -98.0
+offset_left = -9.0
+offset_top = -127.0
+offset_right = 193.0
+offset_bottom = -65.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
 text = "Left Click to shoot and
 break the crate for items"
 
@@ -157,22 +152,30 @@ offset_left = -223.0
 offset_top = 1.0
 offset_right = -13.0
 offset_bottom = 47.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
 text = "Kill the enemy and escape"
 
 [node name="Lights" type="Node" parent="."]
 
 [node name="StandingLightYellow" parent="Lights" instance=ExtResource("10_m5dxo")]
 position = Vector2(9, -450)
+metadata/_edit_lock_ = true
 
 [node name="StandingLightYellow2" parent="Lights" instance=ExtResource("10_m5dxo")]
 position = Vector2(207, -86)
+metadata/_edit_lock_ = true
 
 [node name="StandingLight" parent="Lights" instance=ExtResource("11_p80ut")]
 position = Vector2(-3, 76)
 metadata/_edit_lock_ = true
 
 [node name="StandingLight2" parent="Lights" instance=ExtResource("11_p80ut")]
-position = Vector2(-217, -55)
+position = Vector2(-214, -54)
+metadata/_edit_lock_ = true
+
+[node name="StandingLightYellow3" parent="Lights" instance=ExtResource("10_m5dxo")]
+position = Vector2(-47, -86)
+metadata/_edit_lock_ = true
 
 [node name="Sounds" type="Node" parent="."]
 

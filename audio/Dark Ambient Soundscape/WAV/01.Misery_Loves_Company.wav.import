@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clinlyiryjmwv"
+path="res://.godot/imported/01.Misery_Loves_Company.wav-6d31511b428cc3258e3972c65deaa314.sample"
+
+[deps]
+
+source_file="res://audio/Dark Ambient Soundscape/WAV/01.Misery_Loves_Company.wav"
+dest_files=["res://.godot/imported/01.Misery_Loves_Company.wav-6d31511b428cc3258e3972c65deaa314.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

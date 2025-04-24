@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://quu1ym4l8lib"]
+[gd_scene load_steps=23 format=3 uid="uid://quu1ym4l8lib"]
 
 [ext_resource type="Texture2D" uid="uid://rba5p7m8h0qa" path="res://assets/decals/BlackBackGround.jpg" id="1_11xpj"]
 [ext_resource type="Script" path="res://scenes/levels/boss_fight.gd" id="1_ghm2n"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dt0fqoqidehqr" path="res://Items/StandingLight.tscn" id="16_nr7v3"]
 [ext_resource type="AudioStream" uid="uid://dcrfiun1qu0nu" path="res://audio/AmbientAndAlarm/Portal 2 - Sound Effect - Portal Humming Loop.mp3" id="17_jwjlk"]
 [ext_resource type="AudioStream" uid="uid://ldqptgtqqu6u" path="res://audio/Sinister Royalty Free Music Bundle/Sinister Royalty Free Music Bundle/Sinsiter_4.wav" id="18_rmtek"]
+[ext_resource type="AudioStream" uid="uid://cmx0xa8v5a4l" path="res://audio/Dark Ambient Soundscape/OGG/04.Those_Who_Wait.ogg" id="19_rkx1x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5dx5v"]
 animations = [{
@@ -84,19 +85,25 @@ position = Vector2(6, 174)
 [node name="enemies" type="Node" parent="Characters"]
 
 [node name="EnemieWithKnife" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
-position = Vector2(-132, -443)
+position = Vector2(-197, -620)
 
 [node name="EnemieWithKnife2" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
-position = Vector2(101, -422)
+position = Vector2(183, -659)
 
 [node name="EnemieWithKnife3" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
-position = Vector2(-108, -568)
+position = Vector2(-158, -645)
 
 [node name="EnemieWithKnife4" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
-position = Vector2(132, -571)
+position = Vector2(187, -586)
 
 [node name="EnemieWithKnife5" parent="Characters/enemies" groups=["Enemies"] instance=ExtResource("5_fs0sh")]
-position = Vector2(10, -506)
+position = Vector2(79, -629)
+
+[node name="EnemieWithKnife6" parent="Characters/enemies" instance=ExtResource("5_fs0sh")]
+position = Vector2(-205, -716)
+
+[node name="EnemieWithKnife7" parent="Characters/enemies" instance=ExtResource("5_fs0sh")]
+position = Vector2(191, -729)
 
 [node name="Items" type="Node" parent="."]
 
@@ -117,7 +124,7 @@ position = Vector2(190, -13)
 [node name="Exit" type="Area2D" parent="LevelTransition"]
 position = Vector2(-185, -824)
 script = ExtResource("8_ovjkt")
-next_scene_path = "res://scenes/levels/tutorial_level.tscn"
+next_scene_path = "res://scenes/death_scene_(im_sorry_the_names_are_backwards_for_the_end_credit_and_death_scenes_please_forgive_me).tscn"
 
 [node name="Portal Animation" type="AnimatedSprite2D" parent="LevelTransition/Exit"]
 position = Vector2(183, 120)
@@ -138,7 +145,8 @@ position = Vector2(-4, 183)
 metadata/_edit_lock_ = true
 
 [node name="StandingLight" parent="Lights" instance=ExtResource("16_nr7v3")]
-position = Vector2(2, -581)
+position = Vector2(7, -584)
+metadata/_edit_lock_ = true
 
 [node name="Sound" type="Node" parent="."]
 
@@ -147,6 +155,10 @@ stream = ExtResource("17_jwjlk")
 
 [node name="BossMusic" type="AudioStreamPlayer2D" parent="Sound"]
 stream = ExtResource("18_rmtek")
+
+[node name="Ambient Sound" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource("19_rkx1x")
+autoplay = true
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8

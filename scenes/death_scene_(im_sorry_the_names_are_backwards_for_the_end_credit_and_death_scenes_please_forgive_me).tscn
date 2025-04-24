@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqjv4xmfwqite"]
+
+[ext_resource type="Script" path="res://scenes/death_scene_(im_sorry_the_names_are_backwards_for_the_end_credit_and_death_scenes_please_forgive_me).gd" id="1_ignyp"]
+[ext_resource type="Texture2D" uid="uid://crf6sdua0m363" path="res://assets/decals/Screenshot 2025-03-17 232854.png" id="2_cl6ij"]
+[ext_resource type="AudioStream" uid="uid://4oub11tmlgwc" path="res://audio/Dark Ambient Soundscape/OGG/05.From_The_Ashes.ogg" id="3_ssspa"]
+
+[node name="Death Scene (im sorry the names are backwards for the end credit and death scenes please forgive me)" type="Node2D"]
+script = ExtResource("1_ignyp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = 819.0
+offset_right = 20.0
+offset_bottom = 842.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Label"]
+position = Vector2(32, -256.5)
+scale = Vector2(2, 2)
+texture = ExtResource("2_cl6ij")
+flip_v = true
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -581.0
+offset_top = -207.0
+offset_right = -284.0
+offset_bottom = 227.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 51
+
+[node name="GameStats" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Game Stats:
+"
+metadata/_edit_lock_ = true
+
+[node name="Deaths" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Deaths:"
+metadata/_edit_lock_ = true
+
+[node name="HealthLost" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Health Lost:"
+metadata/_edit_lock_ = true
+
+[node name="EnergyConstumed" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Energy Consumed:"
+metadata/_edit_lock_ = true
+
+[node name="BulletsFired" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Bullets Fired:"
+metadata/_edit_lock_ = true
+
+[node name="GameOver" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -316.0
+offset_right = 217.0
+offset_bottom = -211.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 76
+text = "Game Over!"
+
+[node name="ExitGame" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = 229.0
+offset_right = 102.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "Exit Game"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ssspa")
+autoplay = true

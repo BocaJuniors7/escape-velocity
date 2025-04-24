@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnxm357onhumv"]
+[gd_scene load_steps=7 format=3 uid="uid://cnxm357onhumv"]
 
 [ext_resource type="TileSet" uid="uid://dqo0xn2u01qt2" path="res://graphics/floors doors and airlocks/TileSetForLevelDesign.tres" id="1_cff1s"]
 [ext_resource type="PackedScene" uid="uid://bs6aimxy4riyn" path="res://Characters/Player/player.tscn" id="3_gbdaw"]
 [ext_resource type="PackedScene" uid="uid://dt0fqoqidehqr" path="res://Items/StandingLight.tscn" id="3_vp6pr"]
-[ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/test/canvas_layer.tscn" id="4_a1lkl"]
+[ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="4_a1lkl"]
+[ext_resource type="PackedScene" uid="uid://cvcl3m3fad5gt" path="res://Characters/Enemie/RobotWithGun.tscn" id="5_b0ecv"]
+[ext_resource type="PackedScene" uid="uid://hxbgw1mun0yd" path="res://Characters/Enemie/robot_with_rocket.tscn" id="6_pautf"]
 
 [node name="TileMap" type="TileMap"]
 tile_set = ExtResource("1_cff1s")
@@ -24,5 +26,13 @@ layer_3/modulate = Color(0.627654, 0.711254, 0.713265, 1)
 position = Vector2(-67, -11)
 
 [node name="Player" parent="." instance=ExtResource("3_gbdaw")]
+position = Vector2(-150, 113)
 
 [node name="HUD" parent="." instance=ExtResource("4_a1lkl")]
+
+[node name="RobotWithGun" parent="." instance=ExtResource("5_b0ecv")]
+position = Vector2(-190, -110)
+
+[node name="RobotWithRocket" parent="." instance=ExtResource("6_pautf")]
+position = Vector2(202, 126)
+metadata/_edit_lock_ = true

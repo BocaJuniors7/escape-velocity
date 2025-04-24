@@ -1,14 +1,21 @@
 extends Node2D
 
-@export var tutorial_scene_path: String = "res://scenes/levels/tutorial_level.tscn"
+
+@onready var start_button: Button = $CanvasLayer/Start
+@onready var exit_button: Button = $CanvasLayer/Exit
+
+# Set the path to your first level here
+@export_file("*.tscn") var first_level_path: String = "res://scenes/tutorial_level.tscn"
 
 func _ready():
-	$CanvasLayer/FadeRect.modulate.a = 0.0
+	# Connect button signals
+	start_button.pressed.connect(_on_start_pressed)
+	exit_button.pressed.connect(_on_exit_pressed)
 
-func _unhandled_input(event):
-	
-	if event.is_action_pressed("start"):
-		$AnimationPlayer.play("fade_out")
+func _on_start_pressed():
+	print("🚀 Starting game...")
+	get_tree().change_scene_to_file(first_level_path)
 
-func goto_tutorial():
-	get_tree().change_scene_to_file(tutorial_scene_path)
+func _on_exit_pressed():
+	print("👋 Exiting game...")
+	get_tree().quit()

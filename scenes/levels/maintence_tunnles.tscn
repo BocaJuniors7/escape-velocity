@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsybfdp5iwrkj" path="res://Characters/Enemie/enemie_with_knife.tscn" id="10_412m5"]
 [ext_resource type="PackedScene" uid="uid://b58711wcffhsb" path="res://Items/crate.tscn" id="11_5ewaw"]
 [ext_resource type="PackedScene" uid="uid://w6b54v1bm36u" path="res://HUD/canvas_layer.tscn" id="11_tuw53"]
-[ext_resource type="AudioStream" uid="uid://bweqklyfk401w" path="res://audio/AmbientAndAlarm/Space Station Ambience Sound Effect.mp3" id="14_ltt1l"]
+[ext_resource type="AudioStream" uid="uid://dttwccyw4tlra" path="res://audio/Dark Ambient Soundscape/OGG/01.Misery_Loves_Company.ogg" id="14_w23vn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r56av"]
 animations = [{
@@ -69,7 +69,7 @@ color = Color(0, 0, 0, 1)
 [node name="BossEntrance" type="Area2D" parent="LevelTransitions"]
 position = Vector2(-182, -194)
 script = ExtResource("2_b8vd5")
-next_scene_path = "res://scenes/levels/boss_fight.tscn"
+next_scene_path = "res://scenes/levels/storage_room.tscn"
 
 [node name="Portal Animation" type="AnimatedSprite2D" parent="LevelTransitions/BossEntrance"]
 visible = false
@@ -138,5 +138,5 @@ position = Vector2(817, 1189)
 [node name="Sounds" type="Node" parent="."]
 
 [node name="AmbientSound" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("14_ltt1l")
+stream = ExtResource("14_w23vn")
 autoplay = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmx0xa8v5a4l"
+path="res://.godot/imported/04.Those_Who_Wait.ogg-986b401796bdd1cc924989b4f305197b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Dark Ambient Soundscape/OGG/04.Those_Who_Wait.ogg"
+dest_files=["res://.godot/imported/04.Those_Who_Wait.ogg-986b401796bdd1cc924989b4f305197b.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
