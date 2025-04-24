@@ -1,0 +1,121 @@
+[gd_scene load_steps=12 format=3 uid="uid://ofa3le4p2300"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_oe3r2"]
+[ext_resource type="FontFile" uid="uid://brfy4tcdksqjo" path="res://assets/fonts/StarJedi-DGRW.ttf" id="2_hiedj"]
+[ext_resource type="Texture2D" uid="uid://cn3m1ppq4ipb0" path="res://graphics/hdSpace.png" id="2_ole04"]
+[ext_resource type="Texture2D" uid="uid://b2g63j4vuxsgl" path="res://graphics/Subject.png" id="3_i2x1k"]
+[ext_resource type="FontFile" uid="uid://bo2bi2uslm74" path="res://assets/fonts/PixelatedEleganceRegular-ovyAA.ttf" id="3_ka4sy"]
+[ext_resource type="AudioStream" uid="uid://diodfy1nyk5at" path="res://audio/sci-fi-ambience-stars-are-blinking-270037.mp3" id="6_4d35p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_12dut"]
+font = ExtResource("2_hiedj")
+font_size = 107
+font_color = Color(0.589257, 0.453328, 1.92523e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_udf57"]
+font_size = 32
+
+[sub_resource type="Animation" id="Animation_ssjir"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l8s07"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"goto_tutorial"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7e4iu"]
+_data = {
+"RESET": SubResource("Animation_ssjir"),
+"fade_out": SubResource("Animation_l8s07")
+}
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_oe3r2")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FadeRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.018
+offset_right = 1.0
+offset_bottom = 0.039978
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 1270.0
+offset_bottom = 731.0
+text = "ESCAPE vELoCity"
+label_settings = SubResource("LabelSettings_12dut")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 219.0
+offset_top = 525.0
+offset_right = 1049.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("3_ka4sy")
+text = "Press the Space Bar To Begin"
+label_settings = SubResource("LabelSettings_udf57")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(640, 365.75)
+scale = Vector2(0.669271, 0.671759)
+texture = ExtResource("2_ole04")
+metadata/_edit_lock_ = true
+
+[node name="Ship" type="Sprite2D" parent="."]
+position = Vector2(410, 149)
+scale = Vector2(0.283203, 0.333333)
+texture = ExtResource("3_i2x1k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_4d35p")
+autoplay = true
+parameters/looping = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7e4iu")
+}

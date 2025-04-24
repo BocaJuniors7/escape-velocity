@@ -1,0 +1,363 @@
+[gd_scene load_steps=73 format=3 uid="uid://x7m7xm2mtcie"]
+
+[ext_resource type="Texture2D" uid="uid://bkgo5j75gwlnd" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_1.png" id="1_3kuxp"]
+[ext_resource type="Script" path="res://Characters/Enemie/boss.gd" id="1_shu87"]
+[ext_resource type="Texture2D" uid="uid://nx1u8r5aodn8" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_2.png" id="2_cydw6"]
+[ext_resource type="Texture2D" uid="uid://bwvd1ef756hc8" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_3.png" id="3_b27gr"]
+[ext_resource type="Texture2D" uid="uid://b82l717b0h76i" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_4.png" id="4_8bf5t"]
+[ext_resource type="Texture2D" uid="uid://d17xw2y7revsr" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_5.png" id="5_kpnb3"]
+[ext_resource type="Texture2D" uid="uid://cmbnlvr6w6843" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_6.png" id="6_4jpqs"]
+[ext_resource type="Texture2D" uid="uid://dugf3f0phlnhn" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_7.png" id="7_0qe40"]
+[ext_resource type="Texture2D" uid="uid://bf4yyjjl7aryt" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_8.png" id="8_ilmpr"]
+[ext_resource type="Texture2D" uid="uid://dqvfb86js1o26" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_9.png" id="9_lh0nb"]
+[ext_resource type="Texture2D" uid="uid://brc11xivpuvvw" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_10.png" id="10_m0o4h"]
+[ext_resource type="Texture2D" uid="uid://dhhnceowq2ja7" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_11.png" id="11_c2bpc"]
+[ext_resource type="Texture2D" uid="uid://bpvhiby18untf" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_12.png" id="12_7uixh"]
+[ext_resource type="Texture2D" uid="uid://ca647j5w8tld0" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_13.png" id="13_b8s76"]
+[ext_resource type="Texture2D" uid="uid://c3b8ivv1wcltm" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_14.png" id="14_cj6m5"]
+[ext_resource type="Texture2D" uid="uid://bssekroimpy40" path="res://assets/Boss/individual sprites/03_demon_cleave/demon_cleave_15.png" id="15_m601h"]
+[ext_resource type="Texture2D" uid="uid://dnjvjh7wt34q7" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_1.png" id="16_pgelg"]
+[ext_resource type="Texture2D" uid="uid://dbj4dku3ib583" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_2.png" id="17_6lcgo"]
+[ext_resource type="Texture2D" uid="uid://4c7ykspmqqu1" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_3.png" id="18_qc8hn"]
+[ext_resource type="Texture2D" uid="uid://dukrb2dds7ex3" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_4.png" id="19_bq2yi"]
+[ext_resource type="Texture2D" uid="uid://xxkw4mdg0nlh" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_5.png" id="20_tu7wl"]
+[ext_resource type="Texture2D" uid="uid://dthvpvhye2oxs" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_6.png" id="21_vhbfn"]
+[ext_resource type="Texture2D" uid="uid://dnvsoi8k46who" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_7.png" id="22_nvuqy"]
+[ext_resource type="Texture2D" uid="uid://cbhlexbfhntj5" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_8.png" id="23_7dtwn"]
+[ext_resource type="Texture2D" uid="uid://ceoyutxkv8ihu" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_9.png" id="24_7e7qr"]
+[ext_resource type="Texture2D" uid="uid://c8ju6fc0bxx2v" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_10.png" id="25_uiwak"]
+[ext_resource type="Texture2D" uid="uid://dvu25btmwlond" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_11.png" id="26_rfsg2"]
+[ext_resource type="Texture2D" uid="uid://ckiubk0n28vno" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_12.png" id="27_2x8h0"]
+[ext_resource type="Texture2D" uid="uid://dflr2mjp2awp6" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_13.png" id="28_g7jf1"]
+[ext_resource type="Texture2D" uid="uid://duia7gjkeu4f3" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_14.png" id="29_ycob7"]
+[ext_resource type="Texture2D" uid="uid://b6y1o4mxj28g2" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_15.png" id="30_honsf"]
+[ext_resource type="Texture2D" uid="uid://cs1rytuh1fffr" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_16.png" id="31_sh5ex"]
+[ext_resource type="Texture2D" uid="uid://gupv30sapv17" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_17.png" id="32_32myt"]
+[ext_resource type="Texture2D" uid="uid://diqjo06qvsju6" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_18.png" id="33_4ubsl"]
+[ext_resource type="Texture2D" uid="uid://couamwetsbfax" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_19.png" id="34_n0kgy"]
+[ext_resource type="Texture2D" uid="uid://bq47kwnxitfwu" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_20.png" id="35_p8vgp"]
+[ext_resource type="Texture2D" uid="uid://ccrkdy4r05ql2" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_21.png" id="36_0rtwn"]
+[ext_resource type="Texture2D" uid="uid://cysvm8njor40v" path="res://assets/Boss/individual sprites/05_demon_death/demon_death_22.png" id="37_unssf"]
+[ext_resource type="Texture2D" uid="uid://cx7wtjldxux2" path="res://assets/Boss/individual sprites/01_demon_idle/demon_idle_1.png" id="38_0aiwj"]
+[ext_resource type="Texture2D" uid="uid://b3dq62e2pma46" path="res://assets/Boss/individual sprites/01_demon_idle/demon_idle_2.png" id="39_jn507"]
+[ext_resource type="Texture2D" uid="uid://d2eso8s70u4oe" path="res://assets/Boss/individual sprites/01_demon_idle/demon_idle_3.png" id="40_a1sdc"]
+[ext_resource type="Texture2D" uid="uid://b13ahmn7b5jk5" path="res://assets/Boss/individual sprites/01_demon_idle/demon_idle_4.png" id="41_ewbf2"]
+[ext_resource type="Texture2D" uid="uid://by7gg7dowcc52" path="res://assets/Boss/individual sprites/01_demon_idle/demon_idle_5.png" id="42_87pfp"]
+[ext_resource type="Texture2D" uid="uid://csdiu1y7eyqts" path="res://assets/Boss/individual sprites/01_demon_idle/demon_idle_6.png" id="43_hjuxy"]
+[ext_resource type="Texture2D" uid="uid://buom2bict776y" path="res://assets/Boss/individual sprites/04_demon_take_hit/demon_take_hit_1.png" id="44_aufct"]
+[ext_resource type="Texture2D" uid="uid://n5tvg5jssmld" path="res://assets/Boss/individual sprites/04_demon_take_hit/demon_take_hit_2.png" id="45_4dyts"]
+[ext_resource type="Texture2D" uid="uid://djy8dvn66ilfx" path="res://assets/Boss/individual sprites/04_demon_take_hit/demon_take_hit_3.png" id="46_i1hkq"]
+[ext_resource type="Texture2D" uid="uid://yw08qkkb1swl" path="res://assets/Boss/individual sprites/04_demon_take_hit/demon_take_hit_4.png" id="47_3fnpk"]
+[ext_resource type="Texture2D" uid="uid://cjrvuap7pqhqk" path="res://assets/Boss/individual sprites/04_demon_take_hit/demon_take_hit_5.png" id="48_0phje"]
+[ext_resource type="Texture2D" uid="uid://cc563pe6tkchc" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_1.png" id="49_7ddp3"]
+[ext_resource type="Texture2D" uid="uid://dvymvy8vlikrk" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_2.png" id="50_ovi7t"]
+[ext_resource type="Texture2D" uid="uid://bpkotfv8cstwb" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_3.png" id="51_fua2w"]
+[ext_resource type="Texture2D" uid="uid://cheuxdt8ihu6i" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_4.png" id="52_hsnmn"]
+[ext_resource type="Texture2D" uid="uid://c042whtt3h204" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_5.png" id="53_bltqj"]
+[ext_resource type="Texture2D" uid="uid://dqkyk1t704l84" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_6.png" id="54_clmqw"]
+[ext_resource type="Texture2D" uid="uid://ca3y601b0aixn" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_7.png" id="55_ppvn3"]
+[ext_resource type="Texture2D" uid="uid://blg10pmsry0in" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_8.png" id="56_to6gi"]
+[ext_resource type="Texture2D" uid="uid://ps7euke16w2r" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_9.png" id="57_dp636"]
+[ext_resource type="Texture2D" uid="uid://7nfnkpd8s0oh" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_10.png" id="58_yvqj4"]
+[ext_resource type="Texture2D" uid="uid://dhh7m0r4164sh" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_11.png" id="59_8jl48"]
+[ext_resource type="Texture2D" uid="uid://bqyuxpml1nab6" path="res://assets/Boss/individual sprites/02_demon_walk/demon_walk_12.png" id="60_2kms5"]
+[ext_resource type="AudioStream" uid="uid://dxn6fyb3dgfhh" path="res://audio/attack.wav" id="61_20078"]
+[ext_resource type="AudioStream" uid="uid://ccnoo3njvhwdi" path="res://audio/BossHurt.wav" id="62_wrtdo"]
+[ext_resource type="AudioStream" uid="uid://ddxgtxo2xnap5" path="res://audio/deth'.wav" id="63_opu7n"]
+[ext_resource type="AudioStream" uid="uid://df6h8q3syq6fj" path="res://audio/idle.mp3" id="64_hl4og"]
+[ext_resource type="AudioStream" uid="uid://bmuyk7f2lfp0c" path="res://audio/Stomping hard.wav" id="65_sf3yw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yxy7o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3kuxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cydw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b27gr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8bf5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kpnb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4jpqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0qe40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ilmpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lh0nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m0o4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c2bpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7uixh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b8s76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cj6m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m601h")
+}],
+"loop": true,
+"name": &"Cleave",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_pgelg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6lcgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qc8hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bq2yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tu7wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vhbfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nvuqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7dtwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7e7qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_uiwak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rfsg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2x8h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_g7jf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ycob7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_honsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sh5ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_32myt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_4ubsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_n0kgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_p8vgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_0rtwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_unssf")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_0aiwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jn507")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_a1sdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ewbf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_87pfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_hjuxy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_aufct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_4dyts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_i1hkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_3fnpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_0phje")
+}],
+"loop": true,
+"name": &"Take Hit",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_7ddp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ovi7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_fua2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_hsnmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_bltqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_clmqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ppvn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_to6gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_dp636")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_yvqj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_8jl48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_2kms5")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 11.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yuf5"]
+size = Vector2(430, 600)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_70dw8"]
+radius = 2289.75
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aehjp"]
+radius = 651.738
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_egbx4"]
+radius = 615.081
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wgudq"]
+radius = 319.401
+
+[node name="Boss" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 49
+script = ExtResource("1_shu87")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 4
+visibility_layer = 97
+position = Vector2(663, 252)
+scale = Vector2(4.45139, 5.575)
+sprite_frames = SubResource("SpriteFrames_yxy7o")
+animation = &"Walk"
+autoplay = "Idle"
+frame_progress = 0.596959
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(666, 403)
+shape = SubResource("RectangleShape2D_7yuf5")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(639, 403)
+shape = SubResource("CircleShape2D_70dw8")
+
+[node name="AttackBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
+visible = false
+position = Vector2(641, 315)
+shape = SubResource("CircleShape2D_aehjp")
+
+[node name="RangeBox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeBox"]
+position = Vector2(650, 246)
+shape = SubResource("CircleShape2D_egbx4")
+
+[node name="HitBox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(635, 381)
+shape = SubResource("CircleShape2D_wgudq")
+
+[node name="AttackSouond" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource("61_20078")
+autoplay = true
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource("62_wrtdo")
+autoplay = true
+
+[node name="DeathSounf" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource("63_opu7n")
+
+[node name="IdleSound" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource("64_hl4og")
+autoplay = true
+
+[node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
+visible = false
+position = Vector2(-153, 238)
+stream = ExtResource("65_sf3yw")
